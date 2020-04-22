@@ -1,0 +1,21 @@
+.menu:hover{
+    display: block;
+    background-color:#d6e9c6;
+}
+.mini_menu{
+    display:none;
+    background-color:#d6e9c6;
+}
+.menu:hover a{
+    display: block;
+      
+}
+.sub_menu:hover{
+    display:block ;
+    background-color:  floralwhite;
+}
+.sub_menu{
+    display:block;
+    
+    color:#222;
+}

@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block head %}
+<script>
+      setTimeout(function(){
+           window.location.reload(1);
+        }, 320000);
+</script>
+{% endblock %}
+  {% block bodddy %}
+<body style="background-image: url({% static 'app/images/back10.jpg'%});background-size: cover;">
+{% endblock %}
+{% block content%}
+
+
+<div style=" margin-left:10%;margin-right:10%; margin-top:100px;padding-left:20px; padding-top: 20px; ">
+<div class="jumbotron" >
+    <h1>Quiz Round</h1><br>
+    <h3>The Quiz round has five questions which has to be answered within the time limit of 5.15mins.</h3>
+    <b> In a day, You can only give 3 test and your next chance will be only after 10 days and if you marks is less than previous marks they it wont be update</b>
+</div>
+	<form action='round2' method='GET'>
+		{% for data in val %}
+		    <fieldset style="color: aliceblue; font-family: 'Baskerville Old Face';" id="{{data.group}}">
+				<h2 style="color: aliceblue; font-family: 'Baskerville Old Face';">{{data.question}}</h2>
+				<h4 style="color: aliceblue; font-family: 'Baskerville Old Face';"><input type='radio' name='{{data.group}}' value='a)' style="width:20px;height:20px;margin-right:15px;">{{data.option1}}</h4>
+				<h4 style="color: aliceblue; font-family: 'Baskerville Old Face';"><input type='radio' name='{{data.group}}' value='b)' style="width:20px;height:20px;margin-right:15px;">{{data.option2}}</h4>
+				<h4 style="color: aliceblue; font-family: 'Baskerville Old Face';"><input type='radio' name='{{data.group}}' value='c)' style="width:20px;height:20px;margin-right:15px;">{{data.option3}}</h4>
+				<h4 style="color: aliceblue; font-family: 'Baskerville Old Face';"><input type='radio' name='{{data.group}}' value='d)' style="width:20px;height:20px;margin-right:15px;">{{data.option4}}</h4>
+			</fieldset>
+		{% endfor %}
+		<button type="submit" class="btn btn-primary"> Submit</button>
+	</form>
+</div>
+{% endblock %}

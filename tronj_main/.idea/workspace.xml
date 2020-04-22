@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="48cc97d1-9cd0-4646-8f67-6201316444a9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WtRt1DgFYQ9qdknCbnncPu18PZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BK\Desktop\TRONJ\trail\tronj_main\Tronj\templates\Tronj\registration" />
+      <recent name="C:\Users\BK\Desktop\TRONJ\trail\tronj_main\Tronj\static\app\content\Drone\sub" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\BK\Desktop\TRONJ\trail\tronj_main\Tronj\static\app\images" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.edit_Profile.html">
+    <configuration name="edit_Profile.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/tronj_main/Tronj/templates/Tronj/edit_Profile.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="tronj_main" type="Python.DjangoServer" factoryName="Django server">
+      <module name="tronj_main" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="tronj_main.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.edit_Profile.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48cc97d1-9cd0-4646-8f67-6201316444a9" name="Default Changelist" comment="" />
+      <created>1579967115363</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579967115363</updated>
+      <workItem from="1579967145472" duration="3127000" />
+      <workItem from="1580014338848" duration="15273000" />
+      <workItem from="1580036693299" duration="19202000" />
+      <workItem from="1580184789794" duration="170000" />
+      <workItem from="1580315715899" duration="4007000" />
+      <workItem from="1580809862720" duration="26384000" />
+      <workItem from="1580987619440" duration="917000" />
+      <workItem from="1581049531019" duration="25017000" />
+      <workItem from="1581251192888" duration="27091000" />
+      <workItem from="1581396256856" duration="28000" />
+      <workItem from="1582636874006" duration="13387000" />
+      <workItem from="1582701741461" duration="15785000" />
+      <workItem from="1582798596756" duration="6471000" />
+      <workItem from="1582821207982" duration="1850000" />
+      <workItem from="1582884407687" duration="1696000" />
+      <workItem from="1582963641075" duration="13105000" />
+      <workItem from="1583042296747" duration="7536000" />
+      <workItem from="1583212076017" duration="27101000" />
+      <workItem from="1583385095741" duration="1312000" />
+      <workItem from="1583389213987" duration="37000" />
+      <workItem from="1583390137273" duration="794000" />
+      <workItem from="1583391344313" duration="60871000" />
+      <workItem from="1583735669280" duration="7356000" />
+      <workItem from="1583862099658" duration="3275000" />
+      <workItem from="1583900376977" duration="29305000" />
+      <workItem from="1587035052203" duration="14580000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="458" y="175" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583392831280">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="458" y="175" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1583392831280" />
+    <state x="445" y="246" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1583228917794">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="246" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1583228917794" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1583390932675">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583390932675" />
+    <state width="1323" height="246" key="GridCell.Tab.0.bottom" timestamp="1580038233154">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="246" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580038233154" />
+    <state width="1323" height="246" key="GridCell.Tab.0.center" timestamp="1580038233154">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="246" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580038233154" />
+    <state width="1323" height="246" key="GridCell.Tab.0.left" timestamp="1580038233154">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="246" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580038233154" />
+    <state width="1323" height="246" key="GridCell.Tab.0.right" timestamp="1580038233154">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="246" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580038233154" />
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1583862167301">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583862167301" />
+    <state x="337" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587120410498">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="337" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1587120410498" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Tronj/views.py</url>
+          <line>811</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

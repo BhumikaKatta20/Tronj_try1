@@ -1,0 +1,78 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/col_thing.css' %}" />
+
+{% endblock %}
+{% block bodddy %}
+<body style="background-image: url({% static 'app/images/back10.jpg'%});background-size: cover;">
+{% endblock %}
+{% block content %}
+<div class="jumbotron"  style="margin-left:10%;margin-right:10%;margin-top:150px;height:1200px;" >
+	<form method="get" action="sub" >
+        <div style="color: darkgreen;padding-left:20px;padding-top:20px;font-family: 'Baskerville Old Face';font-size:70px;">
+            <input name="Company_name" class="btn-outline-light;" style="padding-left:25px;border-width: 20px; border-color: darkmagenta;" type="textbox" value="{{c.Company_name}}" readonly></div>
+
+	
+<hr>
+         <div class="row">
+             <div class="col-md-6" >
+                 <div>
+                     <h3 style="font-size:30px; font-family: 'Baskerville Old Face';font-weight: bold;">About the company</h3>
+                     <p style="font-size:25px; font-family: 'Baskerville Old Face';">{{ c.about_the_company }}</p>
+                        </div>
+                 <div>
+                     <h3 style="font-size:30px; font-family: 'Baskerville Old Face';font-weight: bold;">Job Description </h3>
+                     <p style="font-size:25px; font-family: 'Baskerville Old Face';">{{ c.jobdescription }}</p>
+                        </div>
+                      <div class="row">
+         <div class="col-md-6" style="font-size:30px; font-family: 'Baskerville Old Face';font-weight: bold;"> Skills Required:</div>
+    <div class="col-md-6"><input class="btn-outline-dark btn-lg" style="border-color: darkmagenta;" type="textbox" name="Skills_Required" value="{{c.Skills_Required}}" readonly></div>
+</div>
+<br>
+                 <div class="row">
+         <div class="col-md-6" style="font-size:30px; font-family: 'Baskerville Old Face';font-weight: bold;"> Stippend/Salary:</div>
+    <div class="col-md-6"><input class="btn-outline-dark btn-lg" style="border-color: darkmagenta;" type="textbox" name="stipend" value="{{c.stipend}}" readonly></div>
+</div>
+<br>
+                 <div class="row">
+    <div  class="col-md-6" style="font-size:30px; font-family: 'Baskerville Old Face';font-weight: bold;">Job timings:</div>
+    <div class="col-md-6"><input class="btn-outline-dark btn-lg" style="border-color: darkmagenta;" type="textbox" name="Job_timings" value="{{c.Job_timings}}" readonly></div>
+</div><br>
+                 <div class="row">
+    <div  class="col-md-6" style="font-size:30px; font-family: 'Baskerville Old Face';font-weight: bold;">Job Type</div>
+    <div class="col-md-6"><input class="btn-outline-dark btn-lg" style="border-color: darkmagenta;" type="textbox" name="job_type" value="{{c.job_type}}" readonly></div>
+</div><br>
+
+        <div class="row">
+    <div class="col-md-6" style="font-size:30px; font-family: 'Baskerville Old Face';font-weight: bold;">Start of intern:</div>
+    <div class="col-md-6"><input class="btn-outline-dark btn-lg" style="border-color: darkmagenta;" type="textbox" name="Start_of_intern" value="{{c.Start_of_intern}}" readonly></div>
+</div><br>
+
+         <div class="row">
+    <div class="col-md-6" style="font-size:30px; font-family: 'Baskerville Old Face';font-weight: bold;">CEmail::</div>
+    <div class="col-md-6"><input class="btn-outline-dark btn-lg" style="border-color: darkmagenta;" type="textbox" name="CEmail" value="{{c.CEmail}}" readonly></div>
+         </div><br>
+
+             </div>
+
+             <div class="col-md-6">
+
+                 <input class="btn-outline-secondary btn-lg" style="width:90%;" name="Question1" value="{{c.Question1}}" type="textbox" readyonly>
+                 <textarea class="btn-lg" style="border-color: darkmagenta;" type="textbox" cols="60" name="Answer1" rows="6"></textarea>
+                  <input class="btn-outline-secondary btn-lg" style="width:90%;" name="Question2" value="{{c.Question2}}" type="textbox" readyonly>
+                  <textarea class="btn-lg" style="border-color: darkmagenta;" type="textbox" cols="60" name="Answer2" rows="6"></textarea>
+                 <input class="btn-outline-secondary btn-lg" style="width:90%;" name="Question3" value="{{c.Question3}}" type="textbox" readyonly>
+                  <textarea class="btn-lg" style="border-color: darkmagenta;" type="textbox" cols="60" name="Answer3" rows="6"></textarea>
+                 <div class="container form-check-inline" style="margin:30px 10px 10px 70%;">
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button></div>
+         </div>
+             </div>
+</form>
+         </div>
+
+
+
+
+{% endblock %}

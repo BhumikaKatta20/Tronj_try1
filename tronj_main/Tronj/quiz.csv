@@ -1,0 +1,166 @@
+Department,Question,op1,op2,op3,op4,Answer
+web,Expantion of HTML?,a)Hyper Text Marup Langauge,b)Hyper Text Markup Langauge,c)Hyper Text Manage Langauge,d)Hyper Text Marking Launguage,b)
+web,Which tag which belongs to tag?,a)<tr>,b)<p>,c)<title>,d)<div>,a)
+web,What does the SQL stands for?,a)Structured Question Launguage,b)Standard Query Launguage,c)Strong Question Launguage,d)Structured Query Language,d)
+web,What does PHP stands for?,a)Preprocessor Home Page,,c)Personal Home Page,d)Pretext Hypertext Processor,c)
+web,What should be the first tag in any HTML document?,a)<html>,b)<title>,c)<document>,d)<head>,d)
+web,Which is not a domain name extension?,a)mil,b).com,c)org,d).int,d)
+web,Which of the following is most commonly found on web page?,a)Intranet,b)Hyperlink,c)nternet,d)All the above,b)
+web,Tag makes the enclosed text bold.Which is the other tag to make the text bold?,a)<dar>,b)<strong>,c)<black>,d)<emp>,b)
+web,Which tag allows you to add a row in a table?,a)<tr>,b)<th>,c)<td>,d)<cr>,a)
+web,A webpage display a picture.Which  tag is used to display that picture?,a) src,b)img,c)image,d)picture,b)
+python,Which data Type as the key word 'append'?,a)Lists,b)Tuple,c)Dictionary,d)Strings,a)
+python,What command is used to shuffle a list ?L??,a)L.shuffle(),b) random.shufflelist(L),c)shuffle(L),d) random.Shuffle(L),d)
+python,"Which among them will produce {'a', 'b', 'c'}?","a)Tuple(''abc'')
+
+",b) List(''abc''),c)Set(''abac''),d)None of the above,d)
+python, How to create a frame in Python?,a)Frame = new.window(),b) Frame = frame.new(),c)Frame = Frame(),d)Frame = window.new(),c)
+python,In Python we can create a popup menu. Select the code to display a popup menu?,"a) Menu.post(250,250)",b) Menu.post(),c)Menu.display(),"d)Menu.display_popup(250,250)",a)
+python,Which method is used to display a warning message in Python?,a)Tkinter.message.showmessage('message here'),b)Tkinter.message.sshowwarning('message here'),c)Tkinter.messagebox.showwarning('message here'),d)Tkinter.messagebox.showmessage('message here'),c)
+python,Which among them is used to create an object?,a) A class,b) A function,c)A method,d) A constructor,d)
+python,Best part is you can display images in various options in Python. Select the option where you can display an image,a)Only A label,b) Only A button and A label,c)Only A checkbox,"d)A label, a check box , a button and a radio button.",d)
+python,"Name the error that doesn?t cause program to stop/end, but the output is not the desired result or is incorrect.",a)Syntax error,b) Runtime error,c)Logical error,d)All of the above,c)
+Cadvance,1.Which constructor that accepts  parameters is called the default constructor?,a)one,b)two,c)no,d)three,c)
+Cadvance, Which constructor function is designed to copy objects of the same class type?,a)Create constructor,b) Object constructor,c)Dynamic constructor,d)Copy constructor,d)
+Cadvance,  Copy constructor must receive its arguments by __________ .,a)either pass-by-value or pass-by-reference,b)only pass-by-value,c)only pass-by-reference,d)only pass by address,c)
+Cadvance,  Which of the following gets called when an object goes out of scope?,a)constructor,b)destructor,c)main,d)virtual function,b)
+Cadvance,which is used to make a copy of one class object from another class object of the same class type.,a)constructor,b)copy constructor,c)destructor,d) default constructor,b)
+Cadvance, Which of the following are NOT provided by the compiler by default?,a)Zero-argument Constructor,b)Destructor,c)Copy Constructor,d)Copy Constructor,d)
+Cadvance," 
+Destructor calls are made in which order of the corresponding constructor calls?",a)Reverse order,b)Reverse order,c)Depends on how the object is constructed,d)Depends on how many objects are constructed,a)
+Cadvance,Which of the following never requires any arguments?,a)Member function,b)Friend function,c)Default constructor,d)const function,c)
+Cadvance," 
+How many times a constructor is called in the life-time of an object?",a)Only once,b)Twice,c)Thrice,d)Depends on the way of creation of object,a)
+Cadvance,Which of the following gets called when an object is being created?,a)constructor,b)virtual function,c)destructor,d)main,a)
+java,Which is true about a method-local inner class?,a)It must be marked final.,b)It must be marked final.,c)It can be marked public.,d)It can be marked static.,b)
+java,Which of the following would compile without error?,a)int a = Math.abs(-5);,b)int b = Math.abs(5.0);,c)int c = Math.abs(5.5F);,d)int d = Math.abs(5L);,a)
+java,Which is valid declaration of a float?,a)float f = 1F;,b)float f = 1.0;,"c)float f = ""1"";",d)float f = 1.0d;,a)
+java," 
+What is the numerical range of char?",a)0 to 32767,b)0 to 65535,c)-256 to 255,d)-32768 to 32767,b)
+java,"What will be the output of the program?
+
+class Test 
+{
+    public static void main(String [] args) 
+    {
+        int x=20;
+        String sup = (x < 15) ? ""small"" : (x < 22)? ""tiny"" : ""huge"";
+        System.out.println(sup);
+    }
+}",a)small,b) tiny,c)huge,d)Compilation fails,b)
+java,You want subclasses in any package to have access to members of a superclass. Which is the most restrictive access that accomplishes this objective?,a)public,b)private,c)protected,d)transient,c)
+java,Which of the following class level (nonlocal) variable declarations will not compile?,a)protected int a;,b)transient int b = 3;,c) private synchronized int e;,d)volatile int d;,c)
+java,"  
+Given a method in a protected class, what access modifier do you use to restrict access to that method to only the other members of the same class?",a) final,b)static,c)private,d) protected,b)
+java," 
+What is the value of ""d"" after this line of code has been executed?
+
+double d = Math.round ( 2.5 + Math.random() );",a)2,b)3,c)4,d)2.5,b)
+java,Which one of these lists contains only Java programming language keywords?,"a)class, if, void, long, Int, continue","b)goto, instanceof, native, finally, default, throws","c)try, virtual, throw, final, volatile, transient","d)byte, break, assert, switch, include
+",b)
+netframe,"
+Which of the following components of the .NET framework provide an extensible set of classes that can be used by any .NET compliant programming language?",a).NET class libraries,b)Common Language Runtime,c)Common Language Infrastructure,d)Component Object Model,a)
+netframe,Which of the following .NET components can be used to remove unused references from the managed heap?,a)Common Language Infrastructure,b)CLR,c) Garbage Collector,d)Class Loader,c)
+netframe,Which of the following assemblies can be stored in Global Assembly Cache?,a)Private Assemblies,b)Friend Assemblies,c)Shared Assemblies,d)Public Assemblies,c)
+netframe,Which of the following statements is correct about the .NET Framework?,a).NET Framework uses DCOM for achieving language interoperability.,b).NET Framework is built on the DCOM technology.,c) .NET Framework uses DCOM for making transition between managed and unmanaged code.,d).NET Framework uses DCOM for creating unmanaged applications.,c)
+netframe,CLR stands for __________,a)Common Local Runtime,b)Common Language Runtime,c)Common Language Realtime,d)Common Local Realtime,b)
+netframe,ASP.NET Core is an which framework.,a)Licensed,b)Open-sourced,c)Obsolete,d)UI,b)
+netframe,ASP.NET Core applications can target which of the following?,a).NET Core,b).NET Framework 4.x,c).NET Standard,d)All of the above,a)
+netframe,ASP.NET Core supports which of the following platforms?,a)Windows,b)Mac,c)Linux,d)All of the above,c)
+netframe,"By default, static files can be served from which folder?",a)bin,b)Any folder under the root folder,c)StaticFiles,d)wwwroot,d)
+netframe,ASP.NET Core web application uses which  as an internal web server by default.,a)IIS,b)Apache,c)nginx,d)Kestrel,d)
+PHP,What does PHP stand for?,a)Personal Hypertext processor,b)Private Home Page,c)Hypertext Preprocessor,d)Private Hypertext person,c)
+PHP,Which of the following operator is used to concatenate two strings?,a).,b)+,c)-append,d) None of the above.,a)
+PHP,Which of the following function returns the sum of the values in an array?,a)array_sum(),b)array_splice(),c)array_udiff(),d) array_udiff_assoc(),a)
+PHP,Which of the following is used to get cookies?,a)getcookie() function,b)$_COOKIE variable,c) isset() function,d)None of the above,b)
+PHP,Which of the following is an associative array of variables passed to the current script via HTTP cookies?,a)$GLOBALS,b)$_SERVER,c)$_COOKIE,d)$_SESSION,c)
+PHP,Which of the following method of Exception class retrieve the error message when error occured?,a)getMessage(),b)getCode(),c) getFile(),d)getLine(),a)
+PHP, Which of the following is used to declare a constant,a)const,b)constant,c) define,d)def,c)
+PHP,Which of the following is NOT a valid PHP comparison operator?,a) !=,b) >=,c)<=>,d) ===,c)
+PHP,Which of the following differences are valid between PHP 4 and PHP 5?,a)Built-in native support for SQLite,b)Both a and c,c)improved MySQL support,d),b)
+PHP,which  function in PHP Returns a list of response headers sent (or ready to send),a) header(),b)headers_list(),c) header_sent(),d)header_send(),b)
+C,1.What is the built in library function to adjust the allocated dynamic memory size.,a)malloc,b)calloc,c)realloc,d)realloc,c)
+C,2.Choose the invalid predefined macro as per ANSI C.,a) __FILE__,b)__DATE__,c)__TIME__,d)__C++__,d)
+C,"3.The prototype of a function can be used to,",a)Define a function,b) Declare a function,c)Erase a function,d)None of the above,b)
+C,6.Which keyword used to transfer control from a function back to the calling function?,a)switch,b)goto,c)go back,d)return,d)
+C,"8.What does the following declaration mean?
+int (*ptr)[10];",a)ptr is array of pointers to 10 integers,b)ptr is a pointer to an array of 10 integers,c)ptr is an array of 10 integers,d)ptr is an pointer to array,b)
+C,"9.In C, if you pass an array as an argument to a function, what actually gets passed?",a)Value of elements in array,b)First element of the array,c)Base address of the array,d)Base address of the array,c)
+C,10.What are the different types of real data type in C ?,"a)float, double","b)short int, double, long int","c) float, double, long double","d)double, long int, float",c)
+python,"What is a correct syntax to output ""Hello World"" in Python?","a)print(""Hello World"")","b)p(""Hello World"")","c)echo(""Hello World"")","d)echo ""Hello World""",c)
+python,How do you insert COMMENTS in Python code?,a)#,b)//,c)/,d)/*,a)
+python,What is the correct file extension for Python files?,a).pyth,b).py,c).pyt,d).pt,b)
+python,What is the correct syntax to output the type of a variable or object in Python?,a)print(typeOf(x)),b)print(type(x)),c)print(typeofx),d)print(typeof(x)),a)
+python,What is the correct way to create a function in Python?,a)def Function():,b)create myFunction():,c)function myfunction():,d)def myFuction():,d)
+python,Which method can be used to remove any whitespace from both the beginning and the end of a string?,a)strip(),b)len(),c)ptrim(),d)trim(),d)
+python,Which method can be used to return a string in upper case letters?,a)upperCase(),b)uppercase(),c)toUpperCase(),d)upper(),c)
+python,Which method can be used to replace parts of a string?,a)repl(),b)replace(),c)replaceString(),d)switch(),b)
+python,"Which operator is used to multiply numbers?
+
+",a)*,b)#,c)%,d)x,a)
+python,"Which operator can be used to compare two values?
+
+",a)><,b)=,c)==,d)<>,c)
+java,What is the size of float variable?,a)8 bit,b)16 bit,c)32 bit,d)64 bit,b)
+java,What is the size of float variable?,a)String,b)Integer ,c)Double,d)all the above,b)
+java,java.util.Collections is a:,a)class,b)interface,c)object,d)None of the above,a)
+java," Methods such as reverse, shuffle are offered in:",a)Object,b)collection,c)Collections,d)Apache Commons Collections,c)
+java,Which of those allows duplicate elements?,a)Set,b)List,c)All,d)None of the above,b)
+java,Which of those assortment categories has the flexibility to grow dynamically?,a)array,b)Arrays,c)ArrayList,d)none of the above,c)
+java,The Comparable interface contains which method:,a)toCompare,b)compare,c)compareTo(),d)compareWith,c)
+java,Deque and Queue are derived from:,a)AbstractList,b)Collections,c)AbstractCollection,d)List,b)
+java, The Comparator interface contains the method?,a)compareWith(),b)compareTo(),c)compare(),d)compared(),c)
+java,What guarantees type-safety in a collection?,a)Generics,b)Abstract classes,c)Interfaces,d)Collection,a)
+PHP,What should be the correct syntax to write a PHP code?,a)< php >,b)< ? php ?>,c)<? ?>,d)<?php ?>,c)
+PHP, Which version of PHP introduced Try/catch Exception?,a) PHP 4,b)PHP 5,c)PHP 6,d)PHP 5 & latter,d)
+PHP,Which of the following must be installed on your computer so as to run PHP script?,a)XAMPP,b) Apache and PHP,c)IIS,d)All of the above,d)
+PHP,Which of the following is/are a PHP code editor?,a)Notepad,b)Notepad++,c)Adobe Dreamweaver,d)All the above,d)
+PHP, PHP files have a default file extension of_______,a) .html,b).xml,c).php,d).ph,c)
+PHP,Which of the below symbols is a newline character?,a)\r,b)\n,c)/n,d)/r,b)
+PHP,Which of the conditional statements is/are supported by PHP?,a)if statements,b)if-else statements,c)if-elseif statements,d)All the above,d)
+PHP,Which of the looping statements is/are supported by PHP?,a)for loop,b)while loop,c)do-while loop,d)all the above,d)
+PHP,Who is the father of PHP?,a)Rasmus Lerdorf,b)Willam Makepiece,c)Drek Kolkevi,d)List Barely,a)
+PHP,Which one of the following PHP functions can be used to find files?,a) glob(),b) file(),c) fold(),d) get_file(),a)
+Cshrap,Which of the following is correct about variable naming conventions in Cshrap?,"a)A name must begin with a letter that could be followed by a sequence of letters, digits (0 - 9) or underscore.",b)The first character in an identifier cannot be a digit.,c)Both of the above.,d)None of the above,c)
+Cshrap,"Which of the following converts a type to a single Unicode character, where possible in Cshrap?",a) ToSingle,b)ToByte,c)ToChar,d) ToDateTime,c)
+Cshrap,Which of the following converts a type to a 16-bit integer in Cshrap?,a)ToDecimal,b)ToDouble,c)ToInt16,d)ToInt32,c)
+Cshrap,Which of the following operator returns the size of a data type in Cshrap?,a) sizeof,b)typeof,c)&</a>,d)*,a)
+Cshrap, Which of the following method helps in returning more than one value?,a)Value parameters,b)Reference parameters,c)Output parameters,d) None of the above.,c)
+Cshrap,"Which of the following property of Array class in Cshrap gets a 64-bit integer, the total number of elements in all the dimensions of the Array?",a)Rank,b)LongLength,c)Length,d)None of the above.,b)
+Cshrap,Which of the following is true about Cshrap structures vs Cshrap classes?,a)Classes are reference types and structs are value types.,b)Structures do not support inheritance.,c)Structures cannot have default constructor,d)All of the above.,d)
+Cshrap,"Which of the following is the correct output of the Cshrap.NET code snippet given below?  int[ , , ] a = new int[ 3, 2, 3 ] Console.WriteLine(a.Length);",a)20,b)4,c)18,d)10,c)
+Cshrap,Which of the following statements is correct about Interfaces used in Cshrap.NET?,a)All interfaces are derived from an Object class.,b)Interfaces can be inherited.,c)All interfaces are derived from an Object interface.,d) Interfaces can contain only method declaration.,b)
+Cshrap,Which of the following can implement an interface?,a)Data,b)Class,c)Enum,d)Namespace,b)
+Cshrap,Which of the following statements is correct about an Exception?,a)It occurs during compilation.,b)It occurs during linking.,c)It occurs at run-time.,d)It occurs during loading of the program.,c)
+Cshrap,In Cshrap.NET if we do not catch the exception thrown at runtime then which of the following will catch it?,a)Compiler,b)CLR,c)Linker,d)Loader,b)
+Cshrap,Which of the following statements are correct about exception handling in Cshrap.NET?,a)try blocks cannot be nested.,"b)In one function, there can be only one try block.",c)An exception must be caught in the same function in which it is thrown.,d)All values set up in the exception object are available in the catch block.,d)
+Cshrap,The [Serializable()] attribute gets inspected at,a)Compile-time,b)Run-time,c)Design-time,d)Linking-time,b)
+Cshrap,Which of the following are correct ways to pass a parameter to an attribute?,a)By value,b)By reference,c)By address,d)By name,d)
+Cshrap,Which of the following statements are correct about inspecting an attribute in Csharp.NET?,a)An attribute can be inspected at link-time.,b)An attribute can be inspected at run-time.,c)An attribute can be inspected at design-time.,d)All of the above,a)
+Cshrap,Attributes can be applied to?,a)Method,b)Class,c)Assembly,d)All of the above,d)
+Cshrap,Which of the following statement is correct about a String in Cshrap?,a)A String is mutable because it can be modified once it has been created.,b)Methods of the String class can be used to modify the string.,c)A String has a zero-based index.,d)A number CANNOT be represented in the form of a String.,c)
+Cshrap,Which of the following statements is valid about generic procedures in Cshrap?,a)Generic procedures must take at least one type parameter.,b)All procedures in a Generic class are generic.,c)Only those procedures labeled as Generic are generic.,d)Generic procedures can take at the most one generic parameter.,a)
+Cshrap,Which of the following keyword is used to overload user-defined types by defining static member functions?,a)op,b)opoverload,c)operator,d)operatoroverload,c)
+C,"What is the output of the following program?
+
+#include<stdio.h>
+
+main()
+{ 
+   int x = 3;
+   
+   x += 2;
+   x =+ 2;
+   printf(""%d"", x); 
+}",a)2,b)5,c)7,d)complier error,a)
+PHP,What should be the correct syntax to write a PHP code?,a)< php >,b)< ? php ?>,c)<? ?>,d)<?php ?>,c)
+PHP, Which version of PHP introduced Try/catch Exception?,a) PHP 4,b)PHP 5,c)PHP 6,d)PHP 5 & latter,d)
+PHP,Which of the following must be installed on your computer so as to run PHP script?,a)XAMPP,b) Apache and PHP,c)IIS,d)All of the above,d)
+PHP,Which of the following is/are a PHP code editor?,a)Notepad,b)Notepad++,c)Adobe Dreamweaver,d)All the above,d)
+PHP, PHP files have a default file extension of_______,a) .html,b).xml,c).php,d).ph,c)
+PHP,Which of the below symbols is a newline character?,a)\r,b)\n,c)/n,d)/r,b)
+PHP,Which of the conditional statements is/are supported by PHP?,a)if statements,b)if-else statements,c)if-elseif statements,d)All the above,d)
+PHP,Which of the looping statements is/are supported by PHP?,a)for loop,b)while loop,c)do-while loop,d)all the above,d)
+PHP,Who is the father of PHP?,a)Rasmus Lerdorf,b)Willam Makepiece,c)Drek Kolkevi,d)List Barely,a)
+C,"
+If a variable is a pointer to a structure, then which of the following operator is used to access data members of the structure through the pointer variable?",a) .,b)&,c)*,d)->,d)

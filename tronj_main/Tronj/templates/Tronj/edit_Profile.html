@@ -1,0 +1,281 @@
+{% extends 'Tronj/myAccount.html' %}
+{% load staticfiles %}
+
+    <title>TRONJ-My Account</title>
+
+{% block head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/Profile.css' %}" />
+
+   <style>
+       .nav_iconn{
+           color: white;
+           font-size:25px;
+           font-family: "Baskerville Old Face";
+            padding:10px 10px 10px 10px;
+       }
+   .error{
+       font-size:20px;
+       color:red;
+   }
+
+   .labe{
+       font-size:25px;
+   }
+   .labee{
+       font-size:20px;
+   }
+   </style>
+{% endblock %}
+<!-- ***** Header Area Start ***** -->
+ {% block content %}
+{% if user.is_staff %}
+<div class="content" style="margin-top:10px;margin-left:8%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Edit Your Profile</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                  <form action="comeditpre" method="get">
+                     <div class="row">
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Company Name</label>
+                          <input type="text" class="form-control labee" value="{{ user }}" disabled >
+                        </div>
+                      </div>
+                        <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">First Name</label>
+                          <input type="text" class="form-control labe" value="{{ user.first_name }}" name="first_name">
+                            <b class="error">{{first_name_error}}</b>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Last Name</label>
+                          <input type="text" class="form-control  labee" value="{{ user.last_name }}" name="last_name" >
+                            <b class="error">{{last_name_error}}</b>
+                        </div>
+                      </div>
+                        <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Email</label>
+                          <input type="email" class="form-control labee" value="{{ user.email }}" name="email" >
+                        </div>
+                      </div>
+                    </div>
+                      <div class="row">
+
+                    </div>
+                    <div class="row">
+                      <div class="col-md-9">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Address</label>
+                          <input type="text" class="form-control labee"  value="{{ Fdata.Address }}" name="Address">
+                            <b class="error">{{Address_error}}</b>
+                        </div>
+                      </div>
+                         <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Phone Number</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.Phone_number }}" name="Phone_number">
+                            <b class="error">{{ph_no_error}}</b>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">City</label>
+                          <input type="text" class="form-control labee"  value="{{ Fdata.city }}" name="city">
+                            <b class="error">{{city_error}}</b>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">State</label>
+                          <input type="text" class="form-control labee"  value="{{ Fdata.State }}" name="State">
+                            <b class="error">{{State_error}}</b>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Postal Code</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.Postal_code }}" name="Postal_code">
+                             <b class="error">{{Postal_code_error}}</b>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+
+                          <div class="col-md-8">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">About the Company</label>
+                            <textarea class="form-control labee" rows="10" name="about_company">{{ Fdata.about_company }}</textarea>
+                             <b class="error">{{about_company_error}}</b>
+                        </div></div>
+                      </div>
+                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     {% else %}
+    <div class="content" style="margin-top:10px;margin-left:8%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Edit Your Profile</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                  <form action="Empeditpre" method="GET">
+                     <div class="row">
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label class="bmd-label-floating  labe">User Name</label>
+                          <input type="text" class="form-control labee" value="{{ user }}" disabled >
+                        </div>
+                      </div>
+                        <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">First Name</label>
+                          <input type="text" class="form-control labee" value="{{ user.first_name }}" name="first_name" >
+                              <b class="error">{{first_name_error}}</b>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Last Name</label>
+                          <input type="text" class="form-control  labee" value="{{ user.last_name }}" name="last_name">
+                            <b class="error">{{last_name_error}}</b>
+                        </div>
+                      </div>
+                        <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Email</label>
+                          <input type="email" class="form-control labee" value="{{ user.email }}" name="email" >
+                                                        <b class="error">{{email_error}}</b>
+
+                        </div>
+                      </div>
+                    </div>
+                      <div class="row">
+
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Address</label>
+                          <input type="text" class="form-control labee"  value="{{ Fdata.Address }}" name="Address">
+                               <b class="error">{{Address_error}}</b>
+                        </div>
+                      </div>
+                          <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Father Name</label>
+                          <input type="text" class="form-control labee"  value="{{ Fdata.Father_Name}}" name="Father_Name">
+                            <b class="error">{{Father_Name_error}}</b>
+                        </div>
+                      </div>
+                         <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Phone Number</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.Phone_number }}" name="Phone_number">
+                                                        <b class="error">{{ph_no_error}}</b>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">City</label>
+                          <input type="text" class="form-control labee"  value="{{ Fdata.city }}" name="city">
+                            <b class="error">{{city_error}}</b>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">State</label>
+                          <input type="text" class="form-control labee"  value="{{ Fdata.State }}" name="State">
+                            <b class="error">{{State_error}}</b>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Postal Code</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.Postal_code }}" name="Postal_code">
+                                                        <b class="error">{{Postal_code_error}}</b>
+
+                        </div>
+                      </div>
+                        <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Marriage Status</label>
+                          <select name="Marriage_status" class="form-control labee"><option value="Marriged">Marriged</option> <option value="Single">Single</option></select>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="row">
+                          <div class="col-md-8">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Carrer Objectives</label>
+                            <textarea class="form-control labee" rows="5"  PLACEHOLDER="{{ Fdata.Carrer_Objective }}"  name="Carrer_Objective">{{ Fdata.Carrer_Objective }}</textarea>
+                                                        <b class="error">{{Carrer_Objective_error}}</b>
+
+                        </div></div>
+                         <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Date of Birth</label><br><br>
+                            <label class="bmd-label-floating labee" style="color:black;">{{ Fdata.Date_of_birth }}</label><br>
+                          <input type="date" class="form-control labee" name="DOB" value="{{ Fdata.Date_of_birth }}">
+                        </div>
+                      </div>
+
+                      </div>
+                    <div class="row">
+                          <div class="col-md-8">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Strength</label>
+                            <textarea class="form-control labee" rows="5"  PLACEHOLDER="{{ Fdata.Strength }}" name="Strength">{{ Fdata.Strength }}</textarea>
+                            <b class="error">{{Strength_error}}</b>
+
+                        </div></div>
+                          <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Communication Languages</label>
+                          <input type="text" class="form-control labee"  value="{{ Fdata.Communication_lng }}" name="Communication_lng">
+                                                        <b class="error">{{Communication_lng_error}}</b>
+
+                        </div>
+                      </div>
+                      </div>
+
+
+                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     {% endif %}
+
+        {% endblock %}

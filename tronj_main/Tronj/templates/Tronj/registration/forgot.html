@@ -1,0 +1,117 @@
+{% extends 'Tronj/myAccount.html' %}
+{% load staticfiles %}
+
+    <title>TRONJ-My Account</title>
+{% load crispy_forms_tags %}
+{% block head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/Profile.css' %}" />
+
+   <style>
+       .nav_iconn{
+           color: white;
+           font-size:25px;
+           font-family: "Baskerville Old Face";
+            padding:10px 10px 10px 10px;
+       }
+   </style>
+{% endblock %}
+<!-- ***** Header Area Start ***** -->
+{% if user.is_authenticated %}
+ {% else %}
+{% block nav %}
+     <header class="header_area" id="header">
+
+        <nav class="h-100 navbar navbar-expand-lg navbar-transparent">
+                        <!-- Nav -->
+                        <div class="container-fluid h-100 row h-100 col-12 h-100 collapse navbar-collapse navbar-transparent" id="dorneNav">
+                            <ul class="navbar-nav mr-auto " id="dorneMenu">
+                                <a href="{% url 'index' %}"  class="navbar-brand navbar-left"style="font-size:35px;"><b style="color: goldenrod;font-family: 'Cooper Black';">TRONJ</b></a>
+                                {% if user.is_staff %}
+                                 <li class="nav-item active">
+                                    <a href="{% url 'index' %}" ><b class="nav_iconn">HOME</b> </a>
+                                </li>
+                                     <li class="nav-item active">
+                                    <a href="{% url 'myAccount' %}" class="nav_iconn">{{user}}</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a href="{% url 'to_apply' %}" class="nav_iconn">Post The Job</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'Cappli_review' %}" >Review Application</a>
+                                </li>
+
+                                {% elif user.is_authenticated %}
+                                <li class="nav-item active">
+                                    <a  href="{% url 'index' %}" ><b class="nav_iconn">Home</b></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'myAccount' %}" >{{user}}</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'skill_test' %}" >Skill Test</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'to_apply' %}"  >Want a Job</a>
+                                </li>
+
+                                {% else %}
+                                <li class="nav-item active">
+                                    <a class=" nav_iconn" href="{% url 'index' %}">Home</a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a href="{% url 'login' %}" class="nav_iconn">Login </a>
+
+                                </li>
+
+                                <li class="nav-item ">
+                                    <a href="{% url 'register' %}" class="nav_iconn">Sign in  </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+
+
+                        </div>
+
+                    </nav>
+<br><br><br>
+
+    </header>
+    {% endblock %}
+{% block content %}
+<br><br><br><br><br><br><br><br>
+<div class="content" style="margin-top:10px;margin-left:18%;margin-right:18%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-header card-header-primary" >
+                  <h4 class="card-title" >Fill The Answers</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body" style="padding-left:10%;">
+                  <form action="femail_verify" method="GET">
+
+	{% csrf_token %}
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating" style="font-size:20px;">Enter the user name</label>
+                          <input type="text" class="form-control" name="username" >
+                            <div style="color:red;font-size:18px;margin-top:20px;">{{ errormsg }}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <button type='submit' class="btn btn-primary btn-lg pull-right" style="font-size:20px;">Send</button>
+                    <div class="clearfix"></div>
+                        </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        {% endblock %}
+{% endif %}

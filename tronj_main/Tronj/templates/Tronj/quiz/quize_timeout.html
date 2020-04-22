@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block head %}
+<script>
+      setTimeout(function(){
+           window.location.reload(1);
+        }, 320000);
+</script>
+{% endblock %}
+  {% block bodddy %}
+<body style="background-image: url({% static 'app/images/back10.jpg'%});background-size: cover;">
+{% endblock %}
+{% block content%}
+
+
+<div style=" margin-left:10%;margin-right:10%; margin-top:100px;padding-left:20px; padding-top: 20px; ">
+<div class="jumbotron" >
+    <h1>Quiz Round</h1><br><br>
+    <p style="font-size:25px;color:black;" >You have already taken a  test in <u>{{ sub }}</u>. On <u>{{ predate }}</u> and number of tries is <u>{{ trail }}</u>
+        you have scored <u>{{ marks }}%</u>
+    you can give test only after 7 days.<br><br><br><br>
+        Note:In a day, You can only give 3 test and your next chance will be only after 10 days and if you marks is less than previous marks they it wont be update</p>
+</div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'Tronj/myAccount.html' %}
+{% load staticfiles %}
+
+    <title>TRONJ-My Account</title>
+
+{% block head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/Profile.css' %}" />
+
+   <style>
+       .nav_iconn{
+           color: white;
+           font-size:25px;
+           font-family: "Baskerville Old Face";
+           padding:10px 10px 10px 10px;
+       }
+   .cont{
+       font-size:20px;
+   }
+   .labe{
+       font-size:25px;
+   }
+   </style>
+{% endblock %}
+<!-- ***** Header Area Start ***** -->
+ {% block content %}
+
+<div class="content" style="margin-top:10px;margin-left:8%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-header card-header-success">
+                  <h4 class="card-title">Edit Your Experience Details</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                     <div class="row">
+                        <div  class="col-md-3"></div>
+                        <div  class="col-md-6">
+                        <p style="font-size:50px;color: #4caf50;font-family: 'Cooper Black'">Changes are done successfully</p></div>
+                    </div>
+                    <h3>Exprience</h3>
+                    <div class="row">
+
+                          <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Company Name</label>
+                           <br><b class="cont">{{ Fdata.exp_Company_name }} </b><hr>
+                        </div></div>
+                               <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">years of Exprience</label>
+                            <br><b class="cont">{{ Fdata.years_of_experience }} </b><hr>
+                        </div></div>
+                                    <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Experince in Programming Language</label>
+                            <br><b class="cont">{{ Fdata.experienced_programming_langauage }} </b><hr>
+
+                        </div></div>
+                      </div>
+
+
+
+                        </div></div>
+                      </div>
+
+
+</div>
+        </div>
+</div>
+
+        {% endblock %}

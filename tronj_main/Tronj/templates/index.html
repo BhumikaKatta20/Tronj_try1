@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    {% load staticfiles %}
+    {% static "app/images" as baseim %}
+    <!-- Title -->
+
+    <link rel="icon" type="image/png" href="{% static 'app/images/WLogo.PNG'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/company.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/animate.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/own.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/magnific-popup.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/font-awesome.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/pe-icon-7-stroke.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/Profile1.css' %}" />
+<script type="text/javascript" href="{% static 'app/content/Drone/jQuery-3.3.1.min.js' %}" ></script>
+
+     <title>TRONJ</title>
+
+   <style>
+       .nav_icon{
+           color: white;
+           font-size:30px;
+           font-family: Blackboard;
+           padding:10px 10px 10px 10px;
+       }
+   </style>
+    <!-- Core Stylesheet -->
+      <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/style.css' %}" />
+
+    <!-- Responsive CSS -->
+     <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/responsive.css'  %}" />
+     {% block head %}
+
+    {% endblock %}
+
+    {% block bodddy %}
+<body style="background-color: {{backgrd}};">
+    {% endblock %}
+
+
+
+{% block nav %}
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area" id="header">
+
+        <nav class="h-100 navbar navbar-expand-lg">
+                        <!-- Nav -->
+                        <div class="container-fluid h-100 row h-100 col-12 h-100 collapse navbar-collapse" id="dorneNav">
+                            <ul class="navbar-nav mr-auto " id="dorneMenu">
+                                <a href="{% url 'index' %}"  class="navbar-brand navbar-left"style="font-size:35px;"><b style="color: goldenrod;font-family: 'Cooper Black';">TRONJ</b></a>
+                                {% if user.is_staff %}
+                                 <li class="nav-item active">
+                                    <a href="{% url 'index' %}" ><b class="nav_icon">HOME</b> </a>
+                                </li>
+                                     <li class="nav-item active">
+                                    <a href="{% url 'myAccount' %}" class="nav_icon">{{user}}</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a href="{% url 'to_apply' %}" class="nav_icon">Post The Job</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_icon" href="{% url 'Cappli_review' %}" >Review Application</a>
+                                </li>
+
+                                {% elif user.is_authenticated %}
+                                <li class="nav-item active">
+                                    <a  href="{% url 'index' %}" ><b class="nav_icon">Home</b></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_icon" href="{% url 'myAccount' %}" >{{user}}</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_icon" href="{% url 'skill_test' %}" >Skill Test</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_icon" href="{% url 'to_apply' %}"  >Want a Job</a>
+                                </li>
+
+                                {% else %}
+                                <li class="nav-item active">
+                                    <a class=" nav_icon" href="{% url 'index' %}">Home</a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a href="{% url 'login' %}" class="nav_icon">Login </a>
+
+                                </li>
+
+                                <li class="nav-item ">
+                                    <a href="{% url 'register' %}" class="nav_icon">Sign UP  </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+
+
+                        </div>
+                    </nav>
+
+
+    </header>
+{% endblock %}
+    {% block content %}
+  <!-- ***** Welcome Area Start ***** -->
+    <section class="dorne-welcome-area bg-img hero-wrap hero-wrap-2" style="background-image: url({% static 'app/images/des1.jpg'%});height:600px;">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-12 col-md-11">
+                    <div class="hero-content">
+                        <h2 style="font-size:85px; font-family: 'Apple Chancery';">Tronj</h2>
+                        <h4 style="font-size:65px; font-family: 'Monotype Corsiva';">Train Your self on new job..</h4>
+                    </div>
+                    <!-- Hero Search Form -->
+                   
+                </div>
+            </div>
+        </div>
+        <!-- Hero Social Btn -->
+      
+    </section>
+
+    <!-- ***** Catagory Area Start ***** -->
+    <section class="dorne-catagory-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="all-catagories">
+                        <div class="row" >
+                            <!-- Single Catagory Area -->
+                            {% if user.is_authenticated  %}
+                                            {% else %}
+                            <div class="col-12 col-sm-6 col-md" >
+                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.2s">
+                                    <div class="catagory-content">
+                                        <img src="img/core-img/icon-4.png" alt="">
+                                            <a href="{% url 'register' %}">
+                                            <h6 style="font-size:20px;">Register Yourself<br>   </h6>
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>                                        {% endif %}
+
+                            <!-- Single Catagory Area -->
+                            <div class="col-12 col-sm-6 col-md" style="width:25%;height:50px;">
+                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <div class="catagory-content">
+                                        <img src="img/core-img/icon-4.png" alt="">
+                                        <a href="#">
+                                            {% if user.is_staff %}
+                                            <h6 style="font-size:25px;">Fill your Profile</h6>
+                                             {% elif user.is_authenticated %}
+                                                <h6 style="font-size:25px;">Take UP Skill Test </h6>
+                                                {% else %}
+                                                <h6 onclick="window.alert(' Register your self')" style="font-size:20px;">Take UP skill test </h6>
+                                            {% endif %}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Catagory Area -->
+                            <div class="col-12 col-sm-6 col-md" style="width:15%; height:50px;">
+                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.6s">
+                                    <div class="catagory-content">
+                                        <img src="img/core-img/icon-4.png" alt="">
+                                        <a href="#">
+                                            {% if user.is_staff %}
+                                            <h6 style="font-size:25px;">Post the Job</h6>
+                                                {% elif user.is_authenticated  %}
+                                                <h6 style="font-size:25px;">Select the job</h6>
+                                             {% else %}
+                                                <h6 onclick="alert('register yourself')" style="font-size:20px;">Select the job</h6>
+                                            {% endif %}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Catagory Area -->
+                            <div class="col-12 col-sm-6 col-md" style="width:15%; height:50px;">
+                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.8s">
+                                    <div class="catagory-content">
+                                        <img src="img/core-img/icon-4.png" alt="">
+                                        <a href="#">
+                                             {% if user.is_staff %}
+                                            <h6 style="font-size:25px;">Select the Employee</h6>
+                                                  {% elif user.is_authenticated  %}
+                                                  <h6 style="font-size:25px;">Apply for Job</h6>
+                                             {% else %}
+                                                 <h6 onclick="alert('register yourself')" style="font-size:20px;">Apply for Job</h6>
+                                            {% endif %}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Catagory Area -->
+                        {% if user.is_staff %}
+                            {% else %}
+                            <div class="col-12 col-sm-6 col-md" style="width:15%; height:50px;">
+                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="1s">
+                                    <div class="catagory-content">
+                                        <img src="img/core-img/icon-4.png" alt="">
+                                        <a href="#">
+                                                 <h6 onclick="alert('register yourself')" style="font-size:25px;">Job Alotted</h6>
+
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Catagory Area End ***** -->
+
+ <!-- ***** About Area Start ***** -->
+    <section class="dorne-about-area section-padding-0-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    {% if user.is_staff %}
+                         <br><br><br><br><br>
+                        <div class="about-content text-center">
+                        <h2 style="font-family: 'Cooper Black';{{ headlingcontent }}">Find the Employees of your choice with <br><span style="font-family: 'Cooper Black';">Tronj</span></h2>
+                        <p style="font-size:25px; font-family: 'Times New Roman';{{ parcontent }}">First register your self and complete your profile with appropriated information. Post the jobs avaialbe in your company then choose the employees you wanted based on thier performance and information.</p>
+                    </div>
+                    {% elif user.is_authenticated  %}
+                        <br>
+                         <br><br><br><br><br>
+                    <div class="about-content text-center">
+                        <h2 style="font-family: 'Cooper Black';{{ headlingcontent }};">Start or Restart your carrer with <br><span>Tronj</span></h2>
+                        <p style=" font-size:25px; font-family: 'Times New Roman';{{ parcontent }}">
+                            First register your self and complete your profile with appropriated information. Take up the skill test and once you have cleared it, The job offered by the companies are now seen. Select the Job and apply, when you do so the resume is automatically created with the details present in profile. Check your job status and email for any updates done.
+                        </p></b>
+                    </div>
+                    {% else %}
+                        <div class="about-content text-center">
+                        <h2 style="font-family: 'Cooper Black';{{ headlingcontent }};">Start or Restart your carrer with <br><span>Tronj</span></h2>
+                        <p style=" font-size:25px; font-family: 'Times New Roman';{{ parcontent }}">
+                            First register your self and complete your profile with appropriated information. Take up the skill test and once you have cleared it, The job offered by the companies are now seen. Select the Job and apply, when you do so the resume is automatically created with the details present in profile. Check your job status and email for any updates done.
+                        </p></b>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** About Area End ***** -->
+<section class="dorne-about-area section-padding-0-100">
+        <div class="container">
+        <div class="row">
+                <div class="col-12">
+                    <h2 style="font-family: 'Cooper Black';{{ headlingcontent }};font-size:50px;padding:0px 0px 0px 0px;margin:0px 0px 0px 0px;"><center>Job availablity </center><br></h2>
+                    <div style="padding-left:10%;"><img style="width:1200px;height:700px" src="{% static 'app/images/output.png'%}"></div>
+                </div>
+        </div>
+        </div>
+</section>
+    <!-- ***** Editor Pick Area Start ***** -->
+    <section class="dorne-editors-pick-area bg-img bg-overlay-9 section-padding-100" style="background-image: url({% static 'app/images/18.jpg'%});height:900px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <span></span>
+                        <h4 style="font-size:35px;font-family: 'Cooper Black';">How does it work?</h4>
+                       
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-6" style="height:400px; ">
+                    <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.2s">
+                        
+                        <div class="editors-pick-info">
+                            <div class="jumbotron" style="background-color:rgba(0,0,0,0.7);height:550px;">
+
+                                <h3 style="color:floralwhite;font-family: 'Times New Roman';"> Fresher will register and take up the skill test and even complete thier profile. The number of job available for them is now seen and they can apply for it.</h3>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6" style="height:400px; ">
+                    <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s">
+                
+                        <div class="editors-pick-info">
+                           <div class="jumbotron" style="background-color:rgba(0,0,0,0.7);height:550px;">
+                                
+                                <h3 style="color: azure;font-family: 'Times New Roman';">The companies will get registered and complete company's Profile and the they requierd (such as basic qualification, experience if needed, cut of marks etc.). They can now Post for the job avaiable in thier company. All the employees who had applied for the job are showed in the table and they can update the status of the employee in the application table.</h3>
+                            </div>
+                            
+                        </div>
+                    </div>
+                  </div>
+                 
+            </div>
+        </div>
+    </section>
+    <!-- ***** Editor Pick Area End ***** -->
+     {% if user.is_staff %}
+         <section class="dorne-about-area section-padding-0-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                     <div class="about-content text-center" style="margin-top:100px;">
+                        <h2 style="font-family: 'Cooper Black';{{ headlingcontent }}">Post the job</h2>
+                        <p style=" font-size:25px; font-family: 'Times New Roman';{{ parcontent }}">Post the job available in your company. Once the fresher's had cleared the skill test then, the jobs are now available for them.</p>
+                    </div>
+                    <div class="about-content text-center" style="margin-top:100px;">
+                        <h2 style="font-family: 'Cooper Black';{{ headlingcontent }}">Select the employees <br></h2>
+                        <p style=" font-size:25px; font-family: 'Times New Roman';{{ parcontent }}">Resume of an employee is automatically sent to your email. And the employee's who have applied are seen in application table and you can change the status of the employee in an application table(like selected, underreview,not selected).Based on this you can select you suitable one.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% else %}
+    <section class="dorne-about-area section-padding-0-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="about-content text-center" style="margin-top:100px;">
+                        <h2 style="font-family: 'Cooper Black';{{ headlingcontent }}">Skilll Test <br></h2>
+                        <p style=" font-size:25px; font-family: 'Times New Roman';{{ parcontent }}">Select the language and give the skill test. Here the skill test consist of 2 rounds basically as quiz and coding. In the Quiz there will be 5 questions for which you should select the correct answer. In the coding for there will be 3 questions for which you should write the code, This code is analyised by analysing if the apporitate keyword is present or not.</p>
+                    </div>
+                     <div class="about-content text-center" style="margin-top:100px;">
+                        <h2 style="font-family: 'Cooper Black';{{ headlingcontent }}">Want a Job <br></h2>
+                        <p style=" font-size:25px; font-family: 'Times New Roman';{{ parcontent }}">Depending on your skills and skill test score the jobs are now available for you. When you applu for it the default resume is created and sent to the compines email and you can view your job application status in the  application review.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+     <!-- ***** Features Events Area Start ***** -->
+    <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <span></span>
+                        <h4 style="font-size:35px; font-family: 'Cooper Black';">Languages Available</h4>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
+                       
+                        <div class="feature-events-content" style="height:150px;padding-top: 50px;padding-left:200px;">
+                            <h2>Java</h2>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.3s">
+                       
+                        <div class="feature-events-content" style="height:150px;padding-top: 50px;padding-left:200px;">
+                            <h2>Python</h2>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
+                       
+                        <div class="feature-events-content" style="height:150px;padding-top: 50px;padding-left:200px;">
+                            <h2>PHP</h2>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.3s">
+                       
+                        <div class="feature-events-content" style="height:150px;padding-top: 50px;padding-left:200px;">
+                            <h2>C</h2>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
+                       
+                        <div class="feature-events-content" style="height:150px;padding-top: 50px;padding-left:200px;">
+                            <h2>C++</h2>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.3s">
+                       
+                        <div class="feature-events-content" style="height:150px;padding-top: 50px;padding-left:200px;">
+                            <h2>Web Desgining</h2>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
+                       
+                        <div class="feature-events-content" style="height:150px;padding-top: 50px;padding-left:200px;">
+                            <h2>.Net Framework</h2>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+                  <div class="col-12 col-lg-6">
+                    <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.3s">
+
+                        <div class="feature-events-content" style="height:150px;padding-top: 50px;padding-left:200px;">
+                            <h2>C#</h2>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Events Area End ***** -->
+{% endblock %}
+{% block body %}
+{% endblock %}
+  <!-- jQuery-2.2.4 js -->
+    <script src="{% static 'app/content/Drone/jquery-2.2.4.min.js' %}"></script>
+    <!-- Popper js -->
+    <script src="{% static 'app/content/Drone/popper.min.js' %}"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="{% static 'app/content/Drone/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{% static 'app/content/Drone/plugins.js' %}"></script>
+    <!-- Active JS -->
+    <script src="{% static 'app/content/Drone/active.js' %}"></script>
+</body>
+
+</html>
+
+

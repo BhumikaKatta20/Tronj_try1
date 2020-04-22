@@ -1,0 +1,259 @@
+{% extends 'Tronj/myAccount.html' %}
+{% load staticfiles %}
+
+    <title>TRONJ-My Account</title>
+
+{% block head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/Profile.css' %}" />
+
+   <style>
+       .nav_iconn{
+           color: white;
+           font-size:25px;
+           font-family: "Baskerville Old Face";
+            padding:10px 10px 10px 10px;
+       }
+   .error{
+       font-size:20px;
+       color:red;
+   }
+   .cont{
+       font-size:20px;
+   }
+   .labe{
+       font-size:25px;
+   }
+   </style>
+{% endblock %}
+<!-- ***** Header Area Start ***** -->
+ {% block content %}
+{% if user.is_staff %}
+<div class="content" style="margin-top:10px;margin-left:8%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-header card-header-success">
+                  <h4 class="card-title">Edit Your Profile</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div  class="col-md-3"></div>
+                        <div  class="col-md-6">
+                        <p style="font-size:50px;color: #4caf50;font-family: 'Cooper Black'">Changes are done successfully</p></div>
+                    </div>
+                     <div class="row">
+                      <div>
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Company Name</label><br>
+                            <b class="cont">{{ user }} </b><hr>
+                        </div>
+                      </div>
+                        <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">First Name</label><br>
+                            <b class="cont">{{ user.first_name }}</b><br><hr>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Last Name</label><br>
+                            <b class="cont">{{ user.last_name }}</b><hr>
+                        </div>
+                      </div>
+                        <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Email</label><br>
+                            <b class="cont">{{ user.email }}</b><hr>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="row">
+
+                    </div>
+                    <div class="row">
+                      <div class="col-md-9">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Address</label><br>
+                            <b class="cont">{{ Fdata.Address }}</b><hr>
+                        </div>
+                      </div>
+                         <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Phone Number</label><br>
+                          <b class="cont">{{ Fdata.Phone_number }}</b><hr>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">City</label><br>
+                          <b class="cont">{{ Fdata.city }}"</b><hr>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">State</label><br>
+                          <b class="cont">{{ Fdata.State }}</b><hr>
+
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Postal Code</label><br>
+                            <b class="cont">{{ Fdata.Postal_code }}</b><hr>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+
+                          <div class="col-md-8">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">About the Company</label>
+                            <b class="cont">{{ Fdata.about_company }}</b><hr>
+                        </div></div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     {% else %}
+    <div class="content" style="margin-top:10px;margin-left:8%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-header card-header-success">
+                  <h4 class="card-title">Edit Your Profile</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                  <form action="Empeditpre" method="GET">
+                       <div class="row">
+                        <div  class="col-md-3"></div>
+                        <div  class="col-md-6">
+                        <p style="font-size:50px;color: #4caf50;font-family: 'Cooper Black'">Changes are done successfully</p></div>
+                    </div>
+                     <div class="row">
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">User Name</label>
+                            <br><b class="cont">{{ user }}</b><hr>
+                        </div>
+                      </div>
+                        <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">First Name</label>
+                            <br><b class="cont">{{ user.first_name }}</b><hr>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Last Name</label>
+                            <br><b class="cont">{{ user.last_name }}</b><hr>
+                        </div>
+                      </div>
+                        <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Email</label>
+                            <br><b class="cont">{{ user.email }}</b><hr>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="row">
+
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Address</label>
+                            <br><b class="cont">{{ Fdata.Address }}</b><hr>
+                        </div>
+                      </div>
+                          <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Father Name</label>
+                            <br><b class="cont">{{ Fdata.Father_Name }}</b><hr>
+                        </div>
+                      </div>
+                         <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Phone Number</label>
+                            <br><b class="cont">{{ Fdata.Phone_number }}</b><hr>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Marriage Status</label>
+                            <br><b class="cont">{{ Fdata.Marriage_status }}</b><hr>
+                        </div>
+                      </div>
+
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">City</label>
+                            <br><b class="cont">{{ Fdata.city }}</b><hr>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">State</label>
+                            <br><b class="cont">{{ Fdata.State }}</b><hr>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Postal Code</label>
+                            <br><b class="cont">{{Fdata.Postal_code }}</b><hr>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                          <div class="col-md-8">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Carrer Objective.</label>
+                            <br><b class="cont">{{Fdata.Carrer_Objective }}</b><hr>
+
+                        </div></div>
+                         <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Date of Birth</label>
+                            <br><b class="cont">{{ Fdata.Date_of_birth }}</b><hr>
+
+                        </div>
+                      </div>
+
+                      </div>
+                    <div class="row">
+                          <div class="col-md-8">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Strength</label>
+                            <br><b class="cont">{{Fdata.Strength }}</b><hr>
+
+                        </div></div>
+                        <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Communication Languages</label>
+                            <br><b class="cont">{{Fdata.Communication_lng }}</b><hr>
+                        </div>
+                      </div>
+                      </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     {% endif %}
+
+        {% endblock %}

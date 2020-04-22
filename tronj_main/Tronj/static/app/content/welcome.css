@@ -1,0 +1,83 @@
+.welcome_image {
+    width: 70%;
+    height: 400px;
+    margin-left: 3%;
+}
+
+#lo {
+    float: left;
+}
+
+.im{
+
+}
+
+#shop {
+    color: white;
+    padding: 10px;
+}
+
+.banner_i {
+  
+    padding-bottom: 3%;
+    padding-left: 5%;
+    text-algin: center;
+    color: azure;
+    background-size: cover;
+    height: 700px;
+}
+#banner_content {
+    position: relative;
+    margin-top:30%;
+    padding-right:2%;
+    margin-left:13%;
+    margin-bottom: 10%;
+    background-color: rgba(0,0,0,0.7);
+    height:100px;
+}
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.loginform {
+   float:right;
+    margin-top: 25%;
+    margin-left: 25%;
+}
+#banner_c{
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 6%;
+    padding-left: 2%;
+    margin-top: 10%;
+    margin-left: 13%;
+    margin-bottom: 10%;
+    background-color: rgba(0,0,0,0.7);
+    height: 400px;
+    width: 800px;
+}
+.back{
+    width:90%;
+    margin-left:5%;
+    height:60%;
+}
+.im{
+
+    height:100%;
+    width:100%;
+}
+
+
+
+.banner_image {
+    padding-bottom: 5%;
+    padding-left:5%;
+    
+    color: azure;
+    background-size: cover;
+    height:700px;
+    }
+

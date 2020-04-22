@@ -1,0 +1,197 @@
+{% extends 'Tronj/myAccount.html' %}
+
+{% load staticfiles %}
+  {% block bodddy %}
+<body style="background-image: url({% static 'app/images/back28.jpg'%});background-size: cover;">
+{% endblock %}
+{% block head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/Profile.css' %}" />
+   <style>
+       .nav_iconn{
+           color: indigo;
+           font-size:27px;
+           font-family: "Baskerville Old Face";
+            padding:10px 10px 10px 10px;
+       }
+   .edu_dis{
+       font-size:25px;
+
+       margin-top:10px;
+       margin-bottom:5px;
+   }
+       .headsub{
+           font-size:28px;
+           font-family: "Baskerville Old Face";
+
+       }
+   .headsubb{
+           font-size:34px;
+           font-family: "Baskerville Old Face";
+            padding:10px 10px 10px 10px;
+       }
+   </style>
+{% endblock %}
+<!-- ***** Header Area Start ***** -->
+   {% block nav %}
+<!-- ***** Header Area Start ***** -->
+    <header class="header_area" id="header">
+
+        <nav class="h-100 navbar navbar-expand-lg navbar-transparent">
+                        <!-- Nav -->
+                        <div class="container-fluid h-100 row h-100 col-12 h-100 collapse navbar-collapse navbar-transparent" id="dorneNav">
+                            <ul class="navbar-nav mr-auto " id="dorneMenu">
+                                <a href="{% url 'index' %}"  class="navbar-brand navbar-left"style="font-size:35px;"><b style="color: goldenrod;font-family: 'Cooper Black';">TRONJ</b></a>
+                                {% if user.is_staff %}
+                                 <li class="nav-item active">
+                                    <a href="{% url 'index' %}" ><b class="nav_iconn">HOME</b> </a>
+                                </li>
+                                     <li class="nav-item active">
+                                    <a href="{% url 'myAccount' %}" class="nav_iconn">{{user}}</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a href="{% url 'to_apply' %}" class="nav_iconn">Post The Job</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'Cappli_review' %}" >Review Application</a>
+                                </li>
+
+                                {% elif user.is_authenticated %}
+                                <li class="nav-item active">
+                                    <a  href="{% url 'index' %}" ><b class="nav_iconn">Home</b></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'myAccount' %}" >{{user}}</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'skilltest' %}" >Skill Test</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'to_apply' %}"  >Want a Job</a>
+                                </li>
+
+                                {% else %}
+                                <li class="nav-item active">
+                                    <a class=" nav_iconn" href="{% url 'index' %}">Home</a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a href="{% url 'login' %}" class="nav_iconn">Login </a>
+
+                                </li>
+
+                                <li class="nav-item ">
+                                    <a href="{% url 'register' %}" class="nav_iconn">Sign in  </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+
+
+                        </div>
+
+                    </nav>
+<br><br><br>
+
+    </header>
+        <br><br><br><br><br>
+<header>
+
+<nav>
+    <div class="sidebar-wrapper" style="margin: 10px 10% 10px 10%;background-color: whitesmoke;border-radius:10px">
+        <ul class="nav" >
+
+          <li class="nav-item active ">
+            <a class="nav-link" href="{% url 'edit_Profile' %}">
+              <i class="material-icons">person</i>
+              <p>Presonal</p>
+            </a>
+          </li>
+         {% if user.is_staff %}
+                {% else %}
+        <li class="nav-item ">
+            <a class="nav-link" href={% url 'Edu_Content' %}>
+              <i class="material-icons">import_contacts</i>
+
+              <p>Education</p>
+
+            </a>
+          </li>
+        {% endif %}
+        {% if user.is_staff %}
+        {% else %}
+        <li class="nav-item ">
+            <a class="nav-link" href="{% url 'Expre_Content' %}">
+              <i class="material-icons">book</i>
+              <p>Experience</p>
+            </a>
+          </li>
+        {% endif %}
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'email_verify' %}">
+              <i class="material-icons">edit</i>
+              <p>Reset Password</p>
+            </a>
+          </li>
+           <li class="nav-item ">
+               {% if user.is_staff %}
+            <a class="nav-link nav-right" href='Capplication'>
+ {% else %}
+                <a class="nav-link nav-right" href='Eapplication'>
+{% endif %}
+
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'logout' %}">
+              <i class="material-icons">arrow_right_alt</i>
+              <p>Logout</p>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+
+</nav>
+</header>
+
+{% endblock %}
+
+{% block content%}
+{% if user.is_staff %} 
+
+
+	<div class=" table-users" style="width:90%;">
+        <div class="header"><h3 style="color: indigo;font-size:40px; font-family: 'Cooper Black';"><u>Your Posted Applications</u></h3></div>
+    <div class="row" style="font-size: 35px;font-family: 'Baskerville Old Face';color: indigo;padding:10px 10px 10px 10px;">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">Application No.</div>
+    <div class="col-md-2">Date</div>
+    <div class="col-md-2">Company</div>
+    <div class="col-md-2">Skill Required</div>
+    <div class="col-md-2">Stippend/Salary</div>
+        <hr>
+</div>
+
+	   {% for company in Cdata %}
+           <div class="row" style="font-size: 35px;font-family: 'Baskerville Old Face';color: darkslategrey;padding:10px 10px 10px 10px;">
+            <div class="col-md-1"></div>
+            <div class="col-md-2"><a href="{% url 'posted_job' id=company.id %}" class="btn btn-outline-primary py-2"style="font-size: 20px;width:200px;">{{company.id}}</a></div>
+    <div class="col-md-2">{{company.Date_posted}}</div>
+    <div class="col-md-2">{{company.Company_name}}</div>
+    <div class="col-md-2">{{company.Skills_Required}}</div>
+           <div class="col-md-2">{{company.stipend}}</div>
+           </div>
+           
+            {% endfor %}
+	  </tbody>
+	</table>
+</div>
+
+	{% else %}
+	<h1> The contents are hidden</h1>
+{% endif %}
+{% endblock %}

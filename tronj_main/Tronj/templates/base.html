@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    {% load staticfiles %}
+    <link rel="icon" type="image/png" href="{% static 'app/images/WLogo.PNG'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/welcome.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/customerstyle.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/Multi_item.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/owl.carousel.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/company.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'app/content/user.css' %}" />
+    
+    <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
+    <style type="text/css">
+        .banner_image {
+    padding-top: 5%;
+    padding-bottom: 5%;
+        padding-left:5%;
+    text-algin: center;
+    color: azure;
+    background-size: cover;
+        height:200px;
+        }
+    </style>
+</head>
+
+<body style="background-image: url({% static 'app/images/Internship Program.jpg'%});background-size: cover;" >
+
+    <div class="container" >
+             <div class="nav navbar  navbar-dark navbar-fixed-top "style="background:rgba(26,13,0,0.1);">
+            <div class="nav navbar-header   ">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span></button>
+                    <a href="{% url 'index' %}"  class="navbar-brand navbar-left"><b>TRONJ</b></a>
+            </div>
+            <div class="collapse navbar-collapse" id="mynavbar"> 
+            {% if user.is_authenticated %} 
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'index' %}" class=""><span class="glyphicon glyphicon-user"></span>Home</a></li>
+                    <li>
+                        <a href="{% url 'myAccount' %}" class=""><span class="glyphicon glyphicon-user"></span>{{user}}</a></li>
+                    <li><a href="{% url 'to_apply' %}"><span class="glyphicon glyphicon-log-out"></span>To Apply</a></li>
+                    <li class="menu"><a href="{% url 'skilltest' %}"><span class="glyphicon glyphicon-book"></span>Skill Test</a> 
+                    </li>
+                    <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+
+                </ul>
+            {% else %}
+            
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'index' %}" class=""><span class="glyphicon glyphicon-user"></span>Home</a></li>
+                    <li><a href="{% url 'register' %}" class=""><span class="glyphicon glyphicon-user"></span>Sign in</a></li>
+                    <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+                </ul>
+            {% endif %}<hr>
+        </div>           
+         </div>
+       </div>
+
+
+ 
+
+
+    <div class="container body-content">
+            <div id="welcome_image">
+
+            </div>
+
+
+
+
+{% block content %}{% endblock %}
+{% block body %}{% endblock %}
+        <br><br><br>
+        <footer class="nav ">
+            <hr/>
+            <p> <center>&copy; TRONJ Website - </center></p>
+        </footer>
+    </div>
+
+    <script src="{% static 'app/scripts/jquery-1.10.2.js' %}"></script>
+    <script src="{% static 'app/scripts/bootstrap.js' %}"></script>
+    <script src="{% static 'app/scripts/respond.js' %}"></script>
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

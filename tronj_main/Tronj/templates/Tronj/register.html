@@ -1,0 +1,51 @@
+{% extends 'index.html' %}
+{% block head %}
+         <title>Signin</title>
+{% endblock %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+{% block body %}
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/main.css' %}" />
+
+    {% endblock %}
+
+  {% block bodddy %}
+
+<body style="background-image: url( {{ baseim }}/{{ backgrd }});background-size: cover;">
+  {% endblock %}
+{%block content%}
+
+     <div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
+        <div class="wrapper wrapper--w960" style="max-width: 80%;">
+            <div class="card card-2">
+                <div style="background:  url({% static 'app/images/15.jpg'%}) top left/cover no-repeat;width: 29.1%;display: table-cell;"></div>
+                <div class="card-body ">
+                    <h2 class="title">Register Form for the Employee</h2>
+                    <form method="POST">
+	{% csrf_token %}
+                        <table>
+                         {% for field in form %}
+                        <div class="row row-space">
+
+                                <tr>
+
+                                    <td style="color: darkslategray;font-size:25px;font-family: 'Baskerville Old Face' ;">{{ field.label_tag }}</td>
+                                    <td class="input-group">{{ field }}</td>
+
+                                </tr>
+                        <tr><td></td><td style="color: darksalmon;font-size:35px;font-family: 'Microsoft Himalaya';">{{ field.errors }}</td></tr>
+                        </div>
+                        {% endfor %}
+                        <a href="{% url 'Com_signup' %}">Click here, if you are searching Employee for your Company</a>
+                        </table>
+                        <div class="p-t-30">
+                            <button class="btn btn--radius btn--green" style="width:140px;heigth:50px;font-size:20px;" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

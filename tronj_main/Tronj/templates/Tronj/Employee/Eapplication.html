@@ -1,0 +1,47 @@
+{% extends 'Tronj/myAccount.html' %}
+{% load staticfiles %}
+  {% block bodddy %}
+<body style="background-image: url({% static 'app/images/back10.jpg'%});background-size: cover;">
+{% endblock %}
+{% block content%}
+
+
+{% if user.is_staff %} 
+
+    <h1 style="color: aliceblue; font-family: 'Baskerville Old Face';"> The contents are hidden </h1>
+	{% elif user.is_authenticated%}
+
+<div class="header"><h3 style="color: aliceblue;font-size:40px; font-family: 'Cooper Black';"><u>Your Applications</u></h3></div>
+	<div class=" table-users" style="width:80%;">
+<div class="row" style="font-size: 35px;font-family: 'Baskerville Old Face';color:whitesmoke;padding:10px 10px 10px 10px;">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">ID</div>
+    <div class="col-md-2">Company</div>
+    <div class="col-md-2">Skill</div>
+    <div class="col-md-3">Salary/Sripend</div>
+    <div class="col-md-2">Status</div>
+</div>
+
+<div style="height:550px;overflow-x: hidden;overflow-y: auto;">
+	   {% for company in Cdata %}
+		  <div class="row" style="font-size: 35px;font-family: 'Baskerville Old Face';color:whitesmoke;padding:10px 10px 10px 10px;">
+    <div class="col-md-1"></div>
+    <div class="col-md-2">{{company.id}}</div>
+    <div class="col-md-2">{{company.company}}</div>
+    <div class="col-md-2">{{company.Skills_Required}}</div>
+    <div class="col-md-3">{{company.stipend}}</div>
+           <div class="col-md-2">{{company.status}}</div>
+          </div>
+      {%  endfor %}
+</div>
+            </tbody>
+</div>
+
+            {% else %}
+
+      <br><br><br><br>
+<h1 style="color: aliceblue; font-family: 'Baskerville Old Face';"> The contents are hidden </h1>
+      {% endif %}
+
+
+{% endblock %}

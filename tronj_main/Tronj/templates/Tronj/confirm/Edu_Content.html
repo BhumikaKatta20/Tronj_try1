@@ -1,0 +1,204 @@
+{% extends 'Tronj/myAccount.html' %}
+{% load staticfiles %}
+
+    <title>TRONJ-My Account</title>
+
+{% block head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/Profile.css' %}" />
+
+   <style>
+       .nav_iconn{
+           color: white;
+           font-size:25px;
+           font-family: "Baskerville Old Face";
+            padding:10px 10px 10px 10px;
+       }
+   .error{
+       font-size:20px;
+       color:red;
+   }
+   .labe{
+       font-size:25px;
+   }
+   </style>
+{% endblock %}
+<!-- ***** Header Area Start ***** -->
+ {% block content %}
+{% if user.is_staff %}
+
+    {% else %}
+<div class="content" style="margin-top:10px;margin-left:8%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-header card-header-success">
+                  <h4 class="card-title">Education Qualification</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                  <form action="eduedit" method="get">
+                     <div class="row">
+                        <div  class="col-md-3"></div>
+                        <div  class="col-md-6">
+                        <p style="font-size:50px;color: #4caf50;font-family: 'Cooper Black'">Changes are done successfully</p></div>
+                    </div>
+                      <div class="row">
+
+                        <div  class="col-md-6">
+                        <p style="font-size:40px;color:#341a79; font-family: 'Times New Roman'">SSLC</p></div>
+                    </div>
+
+                    <div class="row">
+
+                          <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">School Name</label>
+                            <br><b class="cont">{{Fdata.SSLC_name}} </b><hr>
+                        </div>
+                      </div>
+                         <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="bmd-label-floating labe">Board</label>
+                            <br><b class="cont">{{Fdata.SSLC_board}} </b><hr>
+                        </div></div>
+                          <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Percentage</label>
+                            <br><b class="cont">{{Fdata.SSLC_Percentage}} </b><hr>
+                        </div></div>
+
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Passed out year</label>
+                            <br><b class="cont">{{Fdata.SSLC_passed_year}} </b><hr>
+                        </div>
+                      </div>
+                              </div>
+                       <div class="row">
+
+                        <div  class="col-md-6">
+                        <p style="font-size:40px;color:#341a79; font-family: 'Times New Roman'">PUC</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">PUC IN</label>
+                            <br><b class="cont">{{Fdata.PUC_IN}} </b><hr>
+                        </div>
+                      </div>
+
+                          <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Collage Name</label>
+                            <br><b class="cont">{{Fdata.PUC_name}} </b><hr>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="row">
+                         <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="bmd-label-floating  labe">Board</label>
+                            <br><b class="cont">{{Fdata.PUC_board}} </b><hr>
+                        </div></div>
+                          <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Percentage</label>
+                            <br><b class="cont">{{ Fdata.PUC_Percentage}}% </b><hr>
+                        </div></div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Passed out year</label>
+                            <br><b class="cont">{{Fdata.PUC_passed_year}} </b><hr>
+                        </div>
+                      </div></div>
+                    <div class="row">
+                        <div  class="col-md-6">
+                        <p style="font-size:40px;color:#341a79; font-family: 'Times New Roman'">Graduation</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Graduation IN</label>
+                            <br><b class="cont">{{Fdata.Graduation_IN}} </b><hr>
+                        </div>
+                      </div>
+
+                          <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Collage Name</label>
+                            <br><b class="cont">{{Fdata.Graduation_name}} </b><hr>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="row">
+                         <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="bmd-label-floating labe">Board</label>
+                            <br><b class="cont">{{Fdata.Graduation_board}} </b><hr>
+                        </div></div>
+                          <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Percentage</label>
+                            <br><b class="cont">{{Fdata.Graduation_Percentage}} </b><hr>
+                        </div></div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Passed out year</label>
+                            <br><b class="cont">{{Fdata.Graduation_passed_year}} </b><hr>
+                        </div>
+                      </div></div>
+                      <div class="row">
+                        <div  class="col-md-6">
+                        <p style="font-size:40px;color:#341a79; font-family: 'Times New Roman'">Post Graduation</p></div>
+                    </div>
+                    <div class="row">
+                         <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">PostGraduation IN</label>
+                            <br><b class="cont">{{Fdata.PostGraduation_IN}} </b><hr>
+                        </div>
+                      </div>
+                          <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">College Name</label>
+                            <br><b class="cont">{{Fdata.PostGraduation_name}}% </b><hr>
+                        </div>
+                      </div>
+
+                    </div><div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="bmd-label-floating labe">Board</label>
+                            <br><b class="cont">{{Fdata.PostGraduation_board}}% </b><hr>
+                        </div></div>
+                          <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Percentage</label>
+                            <br><b class="cont">{{Fdata.PostGraduation_Percentage}}% </b><hr>
+                        </div></div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Passed out year</label>
+                            <br><b class="cont">{{Fdata.PostGraduation_passed_year}} </b><hr>
+
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endif %}
+        {% endblock %}

@@ -1,0 +1,277 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block bodddy %}
+
+<body style="background-image: url( {{ baseim }}/{{ backgrd }});background-size: cover;">
+  {% endblock %}
+{% block head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/edit.css' %}" />
+
+   <style>
+       .nav_iconn{
+           color: white;
+           font-size:25px;
+           font-family: "Baskerville Old Face";
+            padding:10px 10px 10px 10px;
+       }
+   .op{
+       width:250px;
+       margin:10px 10px 10px 10px;
+       height:50px;
+   }
+   .tx{
+       width:480px;
+        margin:5px 5px 5px 5px;
+       height:50px;
+   }
+    .error{
+       font-size:20px;
+       color:#a21309;
+        padding-left:25px;
+   }
+
+   .labe{
+       font-size:25px;
+   }
+   .labee{
+       font-size:20px;
+   }
+   </style>
+{% endblock %}
+{% block content%}
+{% if user.is_staff %}
+<br><br><br><br><br><br> <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins" style="padding-top:2%;height:1300px; background-image: url({% static 'app/images/bg_1.jpg'%});"  data-stellar-background-ratio="0.4"s>
+    <div class="row" >
+
+    <div class="wrapper  " style="margin-left:4%;width:1300px;">
+    <h1>Fill The Details to Post the JOB</h1>
+      <form method='get' action='joboffered' >
+            <div class="card card-4" style="background-color: transparent;height:1170px;" >
+                <div class="card-body" style="background-color:rgba(40,30,40,0.3);height:1170px; border-radius: 10px; padding:10px 10px 10px 10px;">
+                     <form method='get' action='joboffered' >
+            <h3>
+                <div style="width:50%;float:left;">
+            <div class="form-check-inline"  >
+                <div style="color: floralwhite;float:left;font-family: 'Times New Roman';" >
+                    Company name:<br><input class='btn btn-outline-light tx' type="textbox" value='{{user}}' name="Company_name" readonly> </div>
+            </div><br>
+                    <div class="form-check-inline" >
+                <div style="float:left;color: floralwhite;font-family: 'Times New Roman';">Email:<b class="error">{{email_error}}</b><br><input class='btn btn-outline-light tx'  type="textbox" value='{{email}}' name="email"> </div>
+            </div><br>
+            <div class="container form-check-inline" >
+                <div style="float:left;color: floralwhite;font-family: 'Times New Roman';">stippend:<b class="error">{{stipend_error}}</b><br><input class='btn btn-outline-light btn-lg tx' type="textbox" name="stipend" value="{{ stipend }}"> </div>
+            </div><br>
+            <div class="container form-check-inline" >
+                <div style="float:left;color: floralwhite;font-family: 'Times New Roman';">The main skill:
+                   <select class='btn btn-outline-light btn-lg tx' name="Skills_Required">
+                    <option value="python">Python</option>
+                    <option value="Cshrap">C#</option>
+                    <option value="web">webpage Designing</option>
+                    <option value="C">C</option>
+                    <option value="Cadvance">C++</option>
+                    <option value="java">Java</option>
+                    <option value="netframe">.Net Framework</option>
+                    <option value="PHP">PHP</option>
+                </select></div>
+            </div><br>
+                   <div class="container form-check-inline" >
+                <div style="float:left;color: floralwhite;font-family: 'Times New Roman';">start of internship:<b class="error">{{Start_of_intern_error}}</b><input class='btn btn-outline-light btn-lg tx' type="date" name="Start_of_intern"></div>
+                   </div><br>
+                <div class="container form-check-inline" >
+                <div style="float:left;color: floralwhite;font-family: 'Times New Roman';">job description<b class="error">{{jobdescription_error}}</b><br><textarea class='btn btn-outline-light btn-lg 'cols="39" rows="4"  onscroll="true" name="jobdescription" value="{{ jobdescription }}" ></textarea></div>
+            </div><br>
+                      <div class="container form-check-inline" >
+                          <div style="float:left;color: floralwhite;font-family: 'Times New Roman';">Your Question?<b class="error">{{Question1_error}}</b><br><textarea  class='btn btn-outline-light btn-lg 'name="Question1" >{{ Question1 }}</textarea></div>
+            </div><br>
+                <div class="container form-check-inline" >
+                    <div style="float:left;color: floralwhite;font-family: 'Times New Roman';">
+                        Your Question?<b class="error">{{Question2_error}}</b><br><textarea class='btn btn-outline-light btn-lg ' name="Question2">{{ Question2 }}</textarea> </div>
+            </div><br>
+                 <div class="container form-check-inline" >
+                <div style="float:left;color: floralwhite;font-family: 'Times New Roman';">
+                    Your Question?<b class="error">{{Question3_error}}</b><br><textarea class='btn btn-outline-light btn-lg '  name="Question3" >{{ Question3 }}</textarea></div>
+            </div><br>
+                </div>
+                <div style="width:50%;float:right;">
+
+                   <div class="container form-check-inline" >
+                       <div style="float:left;color: floralwhite;font-family: 'Times New Roman';">Address<b class="error">{{Address_error}}</b><br><textarea class='btn btn-outline-light btn-lg' name="Address" cols="35" rows="2">{{Address}}</textarea> </div>
+            </div><br>
+            <div class="container form-check-inline" >
+                <div style="float:left;color: floralwhite;font-family: 'Times New Roman';">City<b class="error">{{city_error}}</b><br><input class='btn btn-outline-light btn-lg tx' value='{{Fdata.city}}' type="textbox" name="city" value="{{ city }}"> </div>
+            </div><br>
+
+            <div class="container form-check-inline" >
+                 <div style="float:left;color: floralwhite;">Experienced Programming Langauage<br>
+                <select class='btn btn-outline-light btn-lg tx' name="experienced_programming_langauage">
+                     <option value="Fresher">Fresher</option>
+                    <option value="python">Python</option>
+                    <option value="Cshrap">C#</option>
+                    <option value="web">webpage Designing</option>
+                    <option value="C">C</option>
+                    <option value="Cadvance">C++</option>
+                    <option value="java">Java</option>
+                    <option value="netframe">.Net Framework</option>
+                    <option value="PHP">PHP</option>
+                </select> </div>
+            </div><br>
+                     <div class="container form-check-inline">
+                         <div class="col-6" style="float:left;color: floralwhite;">Years of Experience:</div>
+                <div class="col-6" style="float:right;">
+                <select class='btn btn-outline-light btn-lg op' name="years_of_experience">
+                    <option value="0">Fresher</option>
+                    <option value="1">1 year</option>
+                    <option value="2">2 year</option>
+                    <option value="3">3 year</option>
+                    <option value="4">4 year</option>
+                    <option value="5">5 year</option>
+                    <option value="6">6 year</option>
+                    <option value="7">7 year</option>
+                </select> </div>
+            </div><br>
+            <div class="container form-check-inline" >
+                 <div class="col-6" style="float:left;color: floralwhite;">Job Type:</div>
+                <div class="col-6" style="float:right;">
+               <select class='btn btn-outline-light btn-lg op' name="job_type">
+                    <option value="Internship">Internship</option>
+                    <option value="Partime">Partime</option>
+                    <option value="Fulltime">Fulltime</option>
+                </select> </div>
+            </div><br>
+            <div class="container form-check-inline">
+                <div class="col-6" style="float:left;color: floralwhite;">Python:</div>
+                <div class="col-6" style="float:right;"><select class='btn btn-outline-light btn-lg op'  name="python">
+                    <option value="0">0</option>
+                 <option value="60">60</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                    <option value="90">90</option>
+                </select></div>
+            </div><br>
+            <div class="container form-check-inline">
+                <div class="col-6" style="float:left;color: floralwhite;">C#:</div>
+                <div class="col-6" style="float:right;"><select class='btn btn-outline-light btn-lg op'  name="Csharp">
+                    <option value="0">0</option>
+                 <option value="60">60</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                    <option value="90">90</option>
+                </select></div>
+            </div><br>
+            <div class="container form-check-inline">
+                <div class="col-6" style="float:left;color: floralwhite;">Web designing:</div>
+                <div class="col-6" style="float:right;"><select class='btn btn-outline-light btn-lg op' name="web">
+                    <option value="0">0</option>
+                    <option value="60">60</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                    <option value="90">90</option>
+                </select> </div>
+            </div><br>
+            <div class="container form-check-inline">
+                <div class="col-6" style="float:left;color: floralwhite;">C :</div>
+                <div class="col-6" style="float:right;"><select class='btn btn-outline-light btn-lg op' name="C">
+                    <option value="0">0</option>
+                 <option value="60">60</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                    <option value="90">90</option>
+                </select></div>
+            </div><br>
+            <div class="container form-check-inline" >
+                <div class="col-6" style="float:left;color: floralwhite;">C++ :</div>
+                <div class="col-6" style="float:right;"><select class='btn btn-outline-light btn-lg op' name="Cadvance">
+                    <option value="0">0</option>
+                 <option value="60">60</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                    <option value="90">90</option>
+                </select></div>
+            </div><br>
+            <div class="container form-check-inline" >
+                <div class="col-6" style="float:left;color: floralwhite;">Java:</div>
+                <div class="col-6" style="float:right;"><select class='btn btn-outline-light btn-lg op' name="java">
+                    <option value="0">0</option>
+                 <option value="60">60</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                    <option value="90">90</option>
+                </select></div>
+            </div><br>
+            <div class="container form-check-inline" >
+                <div class="col-6" style="float:left;color: floralwhite;">.net Framework:</div>
+                <div class="col-6" style="float:right;"><select class='btn btn-outline-light btn-lg op' name="netframe" >
+                    <option value="0">0</option>
+                     <option value="60">60</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                    <option value="90">90</option>
+                </select><br></div>
+            </div><br>
+            <div class="container form-check-inline" >
+                <div class="col-6" style="float:left;color: floralwhite;">PHP:</div>
+                <div class="col-6" style="float:right;"><select class='btn btn-outline-light btn-lg op' name="PHP">
+                    <option value="0">0</option>
+                    <option value="60">60</option>
+                    <option value="70">70</option>
+                    <option value="80">80</option>
+                    <option value="90">90</option>
+                </select><br></div>
+            </div><br>
+
+                </div>
+
+        </h3>
+            <div>
+            <button type="submit" class="btn btn-primary"> Submit</button>
+            </div>
+        </form>
+
+{% else %}
+<br><br><br><br> <br><br><br><br>
+
+
+  {% for company in company_data %}
+     <div class="container">
+             <div class="row" data-aos="fade">
+         <div class="col-md-12">
+           <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig"  style="padding:10px 10px 10px 10px;border-radius: 10px; ">
+              <div class="mb-4 mb-md-0 mr-5">
+               <div class="job-post-item-header d-flex align-items-center">
+                 <h2 class="mr-3 text-black h4">{{company.Company_name}}</h2>
+                 <div class="badge-wrap">
+                  <span class="bg-primary text-white badge py-2 px-4">{{company.id}}</span>
+                 </div>
+               </div>
+               <div class="job-post-item-body d-block d-md-flex">
+                 <div class="mr-3"><span class="fl-bigmug-line-portfolio23"></span> <a href="#">{{company.Location}}</a></div>
+                 <div><b>{{company.Skills_Required}}</b></div>
+                 <div style="padding-left:15px; "> Stippend:{{company.stipend}}</div>
+               </div>
+              </div>
+
+              <div class="ml-auto">
+                <a href="{% url 'info' id=company.id %}" class="btn btn-primary py-2">View</a>
+              </div>
+           </div>
+
+         </div>
+        </div>
+
+
+
+        </div>
+
+     {% endfor %}
+
+    <br><br><br><br>
+<br><br><br><br>
+{% endif %}
+
+
+
+
+
+{{Marks}} {{Answer}} {{Answ}}
+{% endblock %}

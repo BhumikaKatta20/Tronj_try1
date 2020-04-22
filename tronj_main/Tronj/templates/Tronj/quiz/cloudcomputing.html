@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content%}
+<div style="padding-left:20px; padding-top: 20px; ">
+	<form action='calculate' method='GET'>
+		{% for data in val %}
+		    <fieldset id="{{data.group}}">
+				<h1>{{data.question}}</h1>
+				<h3><input type='radio' name='{{data.group}}' value='a)'>{{data.option1}}</h3>
+				<h3><input type='radio' name='{{data.group}}' value='b)'>{{data.option2}}</h3>
+				<h3><input type='radio' name='{{data.group}}' value='c)'>{{data.option3}}</h3>
+				<h3><input type='radio' name='{{data.group}}' value='c)'>{{data.option4}}</h3>
+			</fieldset>
+		{% endfor %}
+		<button type="submit" class="btn btn-primary"> Submit</button>
+	</form>
+</div>
+{% endblock %}

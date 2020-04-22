@@ -1,0 +1,35 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content%}
+
+<br><br><br><br>
+<br><br><br>
+<div class="jumbotron" style="background-color:rgba(208, 237, 144, 0.73); height:700px;margin:50px 10% 4% 10%;">
+<div class="jumbotron" style="height:600px; margin:10px 10px 10px;padding:20px 20px 10px 20px;">
+    <div class="jumbotron" style="padding:20px 20px 10px 20px;background-color:rgba(208, 237, 144, 0.73); color: darkgreen; font-family: 'Baskerville Old Face';">
+    <h1 style="color: darkred; font-family: 'Baskerville Old Face';">Select the language for the Skill test</h1>
+<h2>
+<form action='round1' method='GET'>
+    <fieldset id="lan" style="color:darkred; font-family: 'Baskerville Old Face';">
+        <input type="radio" value="python" name="lan" style="width:20px;height:20px;"> Python<br>
+        <input type="radio" value="Cloud" name="lan" style="width:20px;height:20px;"> Cloud computing<br>
+        <input type="radio" value="web" name="lan" style="width:20px;height:20px;"> Webpage Designing<br>
+        <input type="radio" value="C" name="lan" style="width:20px;height:20px;"> C<br>
+        <input type="radio" value="Cadvance" name="lan" style="width:20px;height:20px;"> C++<br>
+        <input type="radio" value="java" name="lan" style="width:20px;height:20px;"> Java<br>
+        <input type="radio" value="netframe" name="lan" style="width:20px;height:20px;">.Net Framework<br>
+        <input type="radio" value="PHP" name="lan" style="width:20px;height:20px;"> PHP<br>
+<button type="submit" class="btn btn-outline-success" style="width:150px;height:60px;float:right;font-size:35px;"> Next</button>
+    </fieldset>
+</form>
+</h2></div><br><br>
+</div></div>
+<br><br><br><br>
+<br><br><br><br>
+
+
+
+
+
+{{Marks}} {{Answer}} {{Answ}}
+{% endblock %}

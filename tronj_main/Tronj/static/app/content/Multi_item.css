@@ -1,0 +1,53 @@
+.menu:hover{
+    display: block;
+    background-color:#101010;
+}
+.mini_menu{
+    display:none;
+     background-color:#101010;
+}
+.menu:hover a{
+    display: block;
+      
+}
+.sub_menu:hover{
+    display:block ;
+     background-color:#101010;
+}
+.sub_menu{
+    display:block;
+    color:#f5f5f5;
+   }
+.input--style-2 {
+  padding: 9px 0;
+  color: #666;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.input--style-2::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #808080;
+}
+
+.input--style-2:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #808080;
+  opacity: 1;
+}
+
+.input--style-2::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #808080;
+  opacity: 1;
+}
+
+.input--style-2:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #808080;
+}
+
+.input--style-2:-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #808080;
+}

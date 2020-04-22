@@ -1,0 +1,333 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block bodddy %}
+<body style="background-image: url({% static 'app/images/back10.jpg'%});background-size: cover;">
+{% endblock %}
+
+    <title>TRONJ-My Account</title>
+{% block head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/Profile.css' %}" />
+   <style>
+       .nav_iconn{
+           color: white;
+           font-size:27px;
+           font-family: "Baskerville Old Face";
+            padding:10px 10px 10px 10px;
+       }
+   .edu_dis{
+       font-size:25px;
+
+       margin-top:10px;
+       margin-bottom:5px;
+   }
+       .headsub{
+           font-size:28px;
+           font-family: "Baskerville Old Face";
+
+       }
+   .headsubb{
+           font-size:34px;
+           font-family: "Baskerville Old Face";
+            padding:10px 10px 10px 10px;
+       }
+   </style>
+{% endblock %}
+<!-- ***** Header Area Start ***** -->
+   {% block nav %}
+<!-- ***** Header Area Start ***** -->
+    <header class="header_area" id="header">
+
+        <nav class="h-100 navbar navbar-expand-lg navbar-transparent">
+                        <!-- Nav -->
+                        <div class="container-fluid h-100 row h-100 col-12 h-100 collapse navbar-collapse navbar-transparent" id="dorneNav">
+                            <ul class="navbar-nav mr-auto " id="dorneMenu">
+                                <a href="{% url 'index' %}"  class="navbar-brand navbar-left"style="font-size:35px;"><b style="color: goldenrod;font-family: 'Cooper Black';">TRONJ</b></a>
+                                {% if user.is_staff %}
+                                 <li class="nav-item active">
+                                    <a href="{% url 'index' %}" ><b class="nav_iconn">HOME</b> </a>
+                                </li>
+                                     <li class="nav-item active">
+                                    <a href="{% url 'myAccount' %}" class="nav_iconn">{{user}}</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a href="{% url 'to_apply' %}" class="nav_iconn">Post The Job</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'Cappli_review' %}" >Review Application</a>
+                                </li>
+
+                                {% elif user.is_authenticated %}
+                                <li class="nav-item active">
+                                    <a  href="{% url 'index' %}" ><b class="nav_iconn">Home</b></a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'myAccount' %}" >{{user}}</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'skill_test' %}" >Skill Test</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav_iconn" href="{% url 'to_apply' %}"  >Want a Job</a>
+                                </li>
+
+                                {% else %}
+                                <li class="nav-item active">
+                                    <a class=" nav_iconn" href="{% url 'index' %}">Home</a>
+                                </li>
+
+                                <li class="nav-item active">
+                                    <a href="{% url 'login' %}" class="nav_iconn">Login </a>
+
+                                </li>
+
+                                <li class="nav-item ">
+                                    <a href="{% url 'register' %}" class="nav_iconn">Sign in  </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+
+
+                        </div>
+
+                    </nav>
+<br><br><br>
+
+    </header>
+        <br><br><br><br><br>
+<header>
+
+<nav>
+    <div class="sidebar-wrapper" style="margin: 10px 10% 10px 10%;background-color: whitesmoke;border-radius:10px">
+        <ul class="nav" >
+
+          <li class="nav-item active ">
+            <a class="nav-link" href="{% url 'edit_Profile' %}">
+              <i class="material-icons">person</i>
+              <p>Presonal</p>
+            </a>
+          </li>
+        {% if user.is_staff %}
+                {% else %}
+        <li class="nav-item ">
+            <a class="nav-link" href={% url 'Edu_Content' %}>
+              <i class="material-icons">import_contacts</i>
+
+              <p>Education</p>
+
+            </a>
+          </li>
+        {% endif %}
+        {% if user.is_staff %}
+        {% else %}
+        <li class="nav-item ">
+            <a class="nav-link" href="{% url 'Expre_Content' %}">
+              <i class="material-icons">book</i>
+              <p>Experience</p>
+            </a>
+          </li>
+        {% endif %}
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'email_verify' %}">
+              <i class="material-icons">edit</i>
+              <p>Reset Password</p>
+            </a>
+          </li>
+           <li class="nav-item ">
+               {% if user.is_staff %}
+            <a class="nav-link nav-right" href='Capplication'>
+ {% else %}
+                <a class="nav-link nav-right" href='Eapplication'>
+{% endif %}
+
+              <i class="material-icons">dashboard</i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="{% url 'logout' %}">
+              <i class="material-icons">arrow_right_alt</i>
+              <p>Logout</p>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+
+</nav>
+</header>
+
+{% endblock %}
+{% block content%}
+{% if user.is_staff %}
+    <div class="content" style="margin-top:10px;margin-left:8%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">My Profile</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="row">
+                        <div class="col-md-2"> <h3 class="headsub">User name: </h3></div><div class="col-md-2"><h3> {{ user }}</h3></div>
+                        <div class="col-md-1"> </div>
+                        <div class="col-md-2"><h3 class="headsub">Address</h3> </div><div class="col-md-4"><h3>{{ Fdata.Address }}</h3> </div>
+                    </div><div class="row">
+                      <div class="col-md-2"> <h3 class="headsub">First Name: </h3></div><div class="col-md-2"><h3> {{ user.first_name }}</h3></div>
+                      <div class="col-md-1"> </div>
+                        <div class="col-md-2"><h3 class="headsub">City</h3> </div><div class="col-md-4"><h3>{{ Fdata.city }}</h3> </div>
+                        </div>
+                      <div class="row">
+                      <div class="col-md-2"> <h3 class="headsub">Last Name: </h3></div><div class="col-md-2"><h3> {{ user.last_name }}</h3></div>
+                          <div class="col-md-1"> </div>
+                        <div class="col-md-2"><h3 class="headsub">State</h3> </div><div class="col-md-4"><h3>{{ Fdata.State }}</h3> </div>
+                        </div><div class="row">
+                      <div class="col-md-2"> <h3 class="headsub">Email: </h3></div><div class="col-md-3"><h3> {{ user.email }}</h3></div>
+                        <div class="col-md-2"><h3 class="headsub">Postal Code</h3> </div><div class="col-md-4"><h3>{{ Fdata.Postal_code }}</h3> </div>
+                      </div><div class="row">
+                      <div class="col-md-2"> <h3 class="headsub">Phone Number</h3></div><div class="col-md-2"><h3> {{ Fdata.Phone_number }}</h3></div>
+                      <div class="col-md-1"> </div>
+                        <div class="col-md-2"><h3 class="headsub">State</h3> </div><div class="col-md-4"><h3>{{ Fdata.State }}</h3> </div>
+                      </div>
+                    <hr>
+                       <div class="row">
+                           <div style="padding-left:5%;padding-right: 10%; width:80%; "> <h1>About the Company</h1><br><h3> {{ Fdata.about_company}}</h3></div>
+                       </div>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% else %}
+<div class="content" style="margin-top:10px;margin-left:8%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">My Profile</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="row">
+                        <div class="col-md-2"> <h3 class="headsub">User name: </h3></div><div class="col-md-2"><h3> {{ user }}</h3></div>
+                        <div class="col-md-1"> </div>
+                        <div class="col-md-2"><h3 class="headsub">Address</h3> </div><div class="col-md-4"><h3>{{ Fdata.Address }}</h3> </div>
+                    </div><div class="row">
+                      <div class="col-md-2"> <h3 class="headsub">First Name: </h3></div><div class="col-md-2"><h3> {{ user.first_name }}</h3></div>
+                      <div class="col-md-1"> </div>
+                        <div class="col-md-2"><h3 class="headsub">City</h3> </div><div class="col-md-4"><h3>{{ Fdata.city }}</h3> </div>
+                        </div>
+                      <div class="row">
+                      <div class="col-md-2"> <h3 class="headsub">Last Name: </h3></div><div class="col-md-2"><h3> {{ user.last_name }}</h3></div>
+                          <div class="col-md-1"> </div>
+                        <div class="col-md-2"><h3 class="headsub">State</h3> </div><div class="col-md-4"><h3>{{ Fdata.State }}</h3> </div>
+                        </div><div class="row">
+                      <div class="col-md-2"> <h3 class="headsub">Email: </h3></div><div class="col-md-3"><h3> {{ user.email }}</h3></div>
+                        <div class="col-md-2"><h3 class="headsub">Postal Code</h3> </div><div class="col-md-4"><h3>{{ Fdata.Postal_code }}</h3> </div>
+                      </div><div class="row">
+                      <div class="col-md-2"> <h3 class="headsub">Father Name</h3></div><div class="col-md-2"><h3> {{ Fdata.Father_Name }}</h3></div>
+                      <div class="col-md-1"> </div>
+                        <div class="col-md-2"><h3 class="headsub">Phone Number</h3> </div><div class="col-md-4"><h3>{{ Fdata.Phone_number }}</h3> </div>
+
+                      </div><div class="row">
+                      <div class="col-md-2"> <h3 class="headsub">Date of Birth </h3></div><div class="col-md-2"><h3> {{ Fdata.Date_of_birth }}</h3></div>
+                      <div class="col-md-1"> </div>
+                        <div class="col-md-2"><h3 class="headsub">State</h3> </div><div class="col-md-4"><h3>{{ Fdata.State }}</h3> </div>
+                      </div>
+
+
+                        <br>
+                      <div class="row">
+                           <div style="padding-left:5%;padding-right: 10%; "> <h1>Carrer Objective</h1><br><h3> {{ Fdata.Carrer_Objective}}</h3></div>
+                       </div><br><hr>
+                      <div class="row">
+                           <div style="padding-left:5%;padding-right: 10%; "> <h1>Your Strength</h1><br><h3> {{ Fdata.Strength}}</h3></div>
+                       </div><br><hr>
+                      <h1>Education Qualification</h1><br>
+
+
+                       <div class="row">
+
+                           <div class="col-md-2 headsubb">Education</div>
+                           <div class="col-md-3 headsubb">Name of the institut</div>
+                           <div class="col-md-3 headsubb">Board</div>
+                           <div class="col-md-2 headsubb">Percentage</div>
+                           <div class="col-md-2 headsubb">Passedout year</div>
+
+                       </div>
+                      <div class="row">
+                              <div class="col-md-2 edu_dis">SSLC</div>
+                              <div class="col-md-3 edu_dis">{{ Fdataa.SSLC_name }}</div>
+                              <div class="col-md-3 edu_dis">{{ Fdataa.SSLC_board }}</div>
+                              <div class="col-md-2 edu_dis">{{ Fdataa.SSLC_Percentage }}</div>
+                              <div class="col-md-2 edu_dis">{{ Fdataa.SSLC_passed_year }}</div>
+
+                       </div>
+
+                      <div class="row">
+                              <div class="col-md-2 edu_dis">PUC</div>
+                              <div class="col-md-3 edu_dis">{{ Fdataa.PUC_name }}</div>
+                              <div class="col-md-3 edu_dis">{{ Fdataa.PUC_board }}</div>
+                              <div class="col-md-2 edu_dis">{{ Fdataa.PUC_Percentage }}</div>
+                              <div class="col-md-2 edu_dis">{{ Fdataa.PUC_passed_year }}</div>
+
+                       </div>
+                      <div class="row">
+                              <div class="col-md-2 edu_dis">Graduation</div>
+                              <div class="col-md-3 edu_dis">{{ Fdataa.Graduation_name }}</div>
+                              <div class="col-md-3 edu_dis">{{ Fdataa.Graduation_board }}</div>
+                              <div class="col-md-2 edu_dis">{{ Fdataa.Graduation_Percentage }}</div>
+                              <div class="col-md-2 edu_dis">{{ Fdataa.Graduation_passed_year }}</div>
+
+                       </div>
+                        <div class="row">
+                              <div class="col-md-2 edu_dis">Post Graduation</div>
+                              <div class="col-md-3 edu_dis">{{ Fdataa.PostGraduation_name }}</div>
+                              <div class="col-md-3 edu_dis">{{ Fdataa.PostGraduation_board }}</div>
+                              <div class="col-md-2 edu_dis">{{ Fdataa.PostGraduation_Percentage }}</div>
+                              <div class="col-md-2 edu_dis">{{ Fdataa.PostGraduation_passed_year }}</div>
+
+                       </div>
+
+<br><hr>
+
+                    <h1>Exprience</h1>
+
+                    <div class="row">
+ <div class="col-md-4"> <h3 class="headsub">Company Name </h3></div><div class="col-md-3"><h3> {{ Fdata.exp_Company_name }}</h3></div>
+                         </div>
+
+                      <div class="row">
+ <div class="col-md-4"> <h3 class="headsub">Experince in Programming Language </h3></div><div class="col-md-3"><h3> {{ Fdata.experienced_programming_langauage}}</h3></div>
+                         </div>
+   <div class="row">
+ <div class="col-md-4"> <h3 class="headsub">years of Exprience </h3></div><div class="col-md-3"><h3> {{ Fdata.years_of_experience }}</h3></div>
+                         </div>
+
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <!-- your footer here -->
+        </div>
+      </footer>
+    </div>
+  </div>
+    {% endif %}
+{% endblock %}

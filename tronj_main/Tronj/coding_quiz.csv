@@ -1,0 +1,115 @@
+Department,Question,Keywords
+web,What is the Structure of an html?,html head body
+web,Write the code for delete and insert an item?,<del> <ins>
+web,"Display an code which includs an width,height and alt attribute.",width height alt
+web,How to control the line breaks and spaces ?Explain with the code.,<pre>
+web,Give the code for formatting short quotations using an approximate elemet?,<q>
+python,Generate the code for greatest of two numbers?,if
+python,"Write the code to call a function, use the function name followed by parenthesis.",def
+python,what is the code to print the data type of the variable x?,print
+python,Display an code for Importing the datetime module and display the current date.,import print
+python,Write an code to print i as long as i is less than 6?,while print
+C,Consider an example of adding a character with an integer −By generating an code.,int char
+C,Write a code to generate a program using an #define function?,#define
+C,"Write a code to generate a structure  which  is optional and each member definition is a normal variable definition, such as int i; or float f; or any other valid variable definition. At the end of the structure's definition, before the final semicolon, you can specify one or more structure variables but it is optional.",struct
+C,What is the syntax of the comment line?,/* */
+C,Generate the simple code for an union tag?,union
+Cadvance,Write the syntax for creating the variable?,type
+Cadvance,What is the syntax of if-else statement?,if else
+Cadvance,Generate the code to find the highest of two numbers?,int return
+Cadvance,What is the syntax of an switch statement?,switch case break
+Cadvance,What is the syntax of an while loop?,while
+java,"Write the code by createing a variable called name of type String and assign it the value ""John""",String
+java,Generate the sample example using break statement?,break
+java,Generate the sample example using continue statement?,continue 
+java,What is the syntax of the main() method?,main(String[] args)
+java,Generate the code using the Booleam statement such as the greater than operator to find out if an expression is true?,int 
+netframe,Write the basic example for an for loop?,for
+netframe,Write the basic example for an while loop?,while
+netframe,Write the basic example for an for each loop?,foreach
+netframe,Write the basic example for an if condition?,if
+netframe,Write the basic example for an if-else condition?,if else
+PHP,Generate the code to show how to output text with the echo command?,echo
+PHP,"Write the example to Return the length of the string ""Hello world!""",strlrn
+PHP,"Write the example to Reverse the string ""Hello world!""",strrev
+PHP,Write the syntax of a user-defined function?,function
+PHP,What is the syntax of the static method in PHP?,ClassName staticMethod()
+web,Which is the correct code for a relative hyperlink?,<a href
+web,Give an example for  largeing the heading in html?,<h1>
+web,Which is the correct HTML element for inserting a line break?Give an example.,<br>
+web,"Which tag in HTML element is  define as important text?
+
+",<strong>
+web,Which tag in  HTML element is define as emphasized text?,<em>
+python,"Insert the missing part of the code below to output ""Hello World"".
+
+
+(""Hello World"")",print
+python,"Comments in Python are written with a special character, which one?
+This is a comment
+",#
+python,"Multiple line Comments in Python are written with a special character, which one?",""""""""
+python,"Create a variable named carname and assign the value Volvo to it.
+
+",carname=Volvo
+python,"Display the sum of 5 + 10, using two variables: x and y.",x=5  y=10 print(x+y)
+C," What is the output of the following program?
+
+#include<stdio.h>
+
+main()
+{ 
+   int a[] = {2,1};
+   
+   printf(""%d"", *a); 
+}",2
+C,what is the syntax to declare function?,return_type 
+C,What id the diffrence between scanf and printf explain with an example?, scanf()  printf()
+C,How can we define a structure explain with example?,struct 
+C,Which function is used to closing a file explain with example?,fclose()
+Cadvance,Use the correct operator to increase the value x=10 of the variable x by 1.,x++
+Cadvance,What is syntax of for loop?,for
+Cadvance,How can we print the text in C++?give example,cout
+Cadvance,What is the sytax of the switch statement?,switch
+Cadvance,Syntax of max() function?,"max(x,y)"
+java,What is the syntax of if statement?,If condition()
+java,Which function is used to find the highest value of x and y?,"Math.max(x,y)"
+java,Which function is used to find the length of the string?Give an example,length()
+java,How the single line comment is displayed in java?,//
+java,"To use a class or a package from the library, you need to use which keyword?give an example",import
+netframe,Which is  the root of the .NET type hierarchy?,System.Object
+netframe,Which loop is used for the termination of the statement?,Exit
+netframe,Which statement is used to Transfers control to the labeled statement.give an example?,Go To
+netframe,which loop repeats a group of statements for each element in a collection explain with example?,for each
+netframe,what is the syntax for the Function statement ?,[Modifiers] Function FunctionName 
+PHP,give an example for an if statement & print an output statement,if
+PHP,give an example for an switch statement?,switch
+PHP,A user-defined function declaration starts with which keyword?give an example?,function 
+PHP,"Whant is the lenth of this example   echo strlen(""Hello world!"");",12
+PHP,Which function is use to create a constants? Give an example?,define
+Cshrap,Create a variable named myNum and assign the value 50 to it.,int myNum=50;
+Csharp,give an example for an switch statemnt in Csharp?,switch
+Csharp,"Insert the missing part of the code below to output ""Hello World!"".
+static void 
+
+(string[] args)
+{
+  
+
+.
+
+(""Hello World!"");    
+}","static void 
+Main
+(string[] args)
+{
+  
+Console
+.
+WriteLine
+(""Hello World!"");    
+}"
+Csharp,how the single line comment is wriiten in Csharp?,//
+Csharp,"Add the correct data type for the following variables:  myNum = 9; myDoubleNum = 8.99; myLetter = 'A'; myBoolean = false; myText = ""Hello World"";","int myNum = 9; double  myDoubleNum = 8.99; char myLetter = 'A'; boolean myBoolean = false; string myText = ""Hello World"";"
+Csharp,"Create a greeting variable, and display the value of it:   = ""Hello"";  Console.WriteLine( );","string greeting= ""Hello""; Console.WriteLine(greeting);"
+Csharp,Create an object of MyClass called myObj.,MyClass myObj=new MyClass();

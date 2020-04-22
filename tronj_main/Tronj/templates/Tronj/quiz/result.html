@@ -1,0 +1,122 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block bodddy %}
+<body style="background-image: url({% static 'app/images/back3.jpg'%});background-size: cover;">
+{% endblock %}
+{% block content%}
+    <div class="content" style="margin-top:150px;margin-left:8%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+
+                <div class="card-body">
+
+
+
+                      <center><h1 style="font-family: 'Cooper Black';color: mediumblue;font-size: 60px;">Skill board</h1></center>
+
+
+                    <div class="row" style="margin-top:10px;margin-bottom: 10px;">
+                        <div class="col-md-2"></div>
+                          <div class="col-md-2">
+                        <div class="form-group">
+                          <h3>Python</h3>
+
+                        </div>
+                          </div>
+                        <div class="col-md-2">
+                        <div class="form-group">
+                            <h3>{{ Fdata.python }}</h3>
+                        </div>
+                          </div>
+                              <div class="col-md-2">
+                        <div class="form-group">
+                          <h3>C</h3>
+                        </div>
+                              </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <h3>{{ Fdata.C }}</h3>
+                        </div>
+                              </div>
+                    </div>
+                          <div class="row" style="margin-top:10px;margin-bottom: 10px;">
+                               <div class="col-md-2"></div>
+                          <div class="col-md-2">
+                        <div class="form-group">
+                          <h3>Java</h3>
+                        </div></div>
+                               <div class="col-md-2">
+                        <div class="form-group">
+                            <h3>{{ Fdata.java }}</h3>
+                        </div></div>
+                              <div class="col-md-2">
+                        <div class="form-group">
+                          <h3>C++</h3>
+                        </div>
+                              </div>
+                           <div class="col-md-4">
+                        <div class="form-group">
+                            <h3>{{ Fdata.Cadvance }}</h3>
+                        </div>
+                              </div></div>
+                                <div class="row" style="margin-top:10px;margin-bottom: 10px;">
+                                     <div class="col-md-2"></div>
+                          <div class="col-md-2">
+                        <div class="form-group">
+                          <h3>Web Development</h3>
+                        </div></div>
+                                    <div class="col-md-2">
+                        <div class="form-group">
+                            <h3>{{ Fdata.web }}</h3>
+                        </div></div>
+                              <div class="col-md-2">
+                        <div class="form-group">
+                          <h2>PHP</h2>
+                        </div>
+                              </div>  <div class="col-md-4">
+                        <div class="form-group">
+                            <h2>{{ Fdata.PHP }}</h2>
+                        </div>
+                              </div>
+                                </div>
+                        <div class="row" style="margin-top:10px;margin-bottom: 10px;">
+                             <div class="col-md-2"></div>
+                          <div class="col-md-2">
+                        <div class="form-group">
+                          <h2>.Net Framework</h2>
+                        </div>
+                      </div>
+                             <div class="col-md-2">
+                        <div class="form-group">
+                            <h2>{{ Fdata.netframe }}</h2>
+                        </div>
+                      </div>
+
+                          <div class="col-md-2">
+                        <div class="form-group">
+                          <h2>C#</h2>
+
+                        </div>
+                      </div>
+                             <div class="col-md-4">
+                        <div class="form-group">
+                            <h2>{{ Fdata.Csharp }}</h2>
+                        </div>
+                      </div>
+                        </div>
+                      <br><br><br>
+                      <div class="row">
+                          <h1 style="margin-left:25%;">  You have scored {{scored}}</h1>
+                      </div>
+<br><br><br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+{% endblock %}

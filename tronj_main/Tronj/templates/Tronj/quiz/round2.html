@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block bodddy %}
+<body style="background-image: url({% static 'app/images/back7.jpg'%});background-size: cover;">
+{% endblock %}
+{% block head %}
+<script>
+      setTimeout(function(){
+           window.location.reload(1);
+        }, 120000);
+</script>
+{% endblock %}
+{% block content%}
+{{language}}
+
+<div style="margin-left:20%; margin-top:100px;adding-left:20px; padding-top: 20px; ">
+	<form action='result' method='GET'>
+		{% for data in valu %}
+		    <fieldset  id="{{data.group}}">
+				<h2 style="color: aliceblue; font-family: 'Baskerville Old Face';">{{data.question}}</h2>
+				<h4><textarea rows='10' cols="80" name='{{data.group}}'></textarea></h4>
+			</fieldset>
+		{% endfor %}
+		<button type="submit" class="btn btn-primary"> Submit</button>
+	</form>
+</div>
+{% endblock %}

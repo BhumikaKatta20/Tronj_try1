@@ -1,0 +1,225 @@
+{% extends 'Tronj/myAccount.html' %}
+{% load staticfiles %}
+
+    <title>TRONJ-My Account</title>
+
+{% block head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/Profile.css' %}" />
+
+   <style>
+       .nav_iconn{
+           color: white;
+           font-size:25px;
+           font-family: "Baskerville Old Face";
+            padding:10px 10px 10px 10px;
+       }
+   .error{
+       font-size:20px;
+       color:red;
+   }
+   .labe{
+       font-size:25px;
+   }
+   .labee{
+       font-size:21px;
+   }
+   </style>
+{% endblock %}
+<!-- ***** Header Area Start ***** -->
+ {% block content %}
+{% if user.is_staff %}
+
+
+    {% else %}
+<div class="content" style="margin-top:10px;margin-left:8%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Education Qualification</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                  <form action="eduedit" method="get">
+
+
+                      <div class="row">
+
+                        <div  class="col-md-6">
+                        <p style="font-size:40px;color:#341a79; font-family: 'Times New Roman'">SSLC</p></div>
+                    </div>
+
+
+                    <div class="row">
+
+                          <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">School Name</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.SSLC_name }}" name="SSLC_name">
+                            <b class="error">{{SSLC_name_error}}</b>
+                        </div>
+                      </div>
+                         <div class="col-md-3">
+                        <div class="form-group">
+                            <label class="bmd-label-floating labe">Board</label>
+                            <input type="text" class="form-control labee" value="{{ Fdata.SSLC_board }}" name="SSLC_board">
+                            <b class="error">{{SSLC_board_error}}</b>
+                        </div></div>
+                          <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Percentage</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.SSLC_Percentage }}" name="SSLC_Percentage">
+                            <b class="error">{{SSLC_Percentage_error}}</b>
+                        </div></div>
+
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Passed out year</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.SSLC_passed_year }}" name="SSLC_passed_year">
+                            <b class="error">{{SSLC_passed_year_error}}</b>
+                        </div>
+                      </div>
+                              </div>
+                       <div class="row">
+
+                        <div  class="col-md-6">
+                        <p style="font-size:40px;color:#341a79; font-family: 'Times New Roman'">PUC</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">PUC IN</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.PUC_IN }}" name="PUC_IN">
+                            <b class="error">{{PUC_IN_error}}</b>
+                        </div>
+                      </div>
+
+                          <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Collage Name</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.PUC_name }}" name="PUC_name">
+                            <b class="error">{{PUC_name_error}}</b>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="row">
+                         <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="bmd-label-floating  labe">Board</label>
+                            <input type="text" class="form-control labee" value="{{ Fdata.PUC_board }}" name="PUC_board">
+                            <b class="error">{{PUC_board_error}}</b>
+
+                        </div></div>
+                          <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Percentage</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.PUC_Percentage }}" name="PUC_Percentage">
+                            <b class="error">{{PUC_Percentage_error}}</b>
+                        </div></div>
+
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Passed out year</label>
+                          <input type="text" class="form-control labee"  value="{{ Fdata.PUC_passed_year }}" name="PUC_passed_year">
+                            <b class="error">{{PUC_passed_year_error}}</b>
+
+                        </div>
+                      </div></div>
+                    <div class="row">
+                        <div  class="col-md-6">
+                        <p style="font-size:40px;color:#341a79; font-family: 'Times New Roman'">Graduation</p></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Graduation IN</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.Graduation_IN }}" name="Graduation_IN">
+                            <b class="error">{{ Graduation_IN_error}}</b>
+                        </div>
+                      </div>
+
+                          <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Collage Name</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.Graduation_name }}" name="Graduation_name">
+                            <b class="error">{{Graduation_name_error}}</b>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="row">
+                         <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="bmd-label-floating labe">Board</label>
+                            <input type="text" class="form-control labee" value="{{ Fdata.Graduation_board }}" name="Graduation_board">
+                            <b class="error">{{Graduation_board_error}}</b>
+                        </div></div>
+                          <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Percentage</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.Graduation_Percentage }}" name="Graduation_Percentage">
+                        <b class="error">{{Graduation_Percentage_error}}</b>
+                        </div></div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Passed out year</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.Graduation_passed_year }}" name="Graduation_passed_year">
+                            <b class="error">{{Graduation_passed_year_error}}</b>
+                        </div>
+                      </div></div>
+                      <div class="row">
+                        <div  class="col-md-6">
+                        <p style="font-size:40px;color:#341a79; font-family: 'Times New Roman'">Post Graduation</p></div>
+                    </div>
+                    <div class="row">
+                         <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">PostGraduation IN</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.PostGraduation_IN }}" name="PostGraduation_IN">
+                        <b class="error">{{PostGraduation_IN_error}}</b>
+                        </div>
+                      </div>
+                          <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">College Name</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.PostGraduation_name }}" name="PostGraduation_name">
+                        <b class="error">{{PostGraduation_name_error}}</b>
+                        </div>
+                      </div>
+
+                    </div><div class="row">
+                      <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="bmd-label-floating labe">Board</label>
+                            <input type="text" class="form-control labee" value="{{ Fdata.PostGraduation_board }}" name="PostGraduation_board">
+                        <b class="error">{{PostGraduation_board_error}}</b>
+                        </div></div>
+                          <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Percentage</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.PostGraduation_Percentage }}" name="PostGraduation_Percentage">
+                        <b class="error">{{PostGraduation_Percentage_error}}</b>
+                        </div></div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Passed out year</label>
+                          <input type="text" class="form-control labee" value="{{ Fdata.PostGraduation_passed_year }}" name="PostGraduation_passed_year">
+                            <b class="error">{{PostGraduation_passed_year_error }}</b>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endif %}
+        {% endblock %}

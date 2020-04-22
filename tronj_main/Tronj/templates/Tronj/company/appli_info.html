@@ -1,0 +1,81 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block bodddy %}
+
+<body style="background-image: url( {% static 'app/images/wal2.jpg'%});background-size: cover;">
+  {% endblock %}
+{% block content %}
+<div class="jumbotron"  style="background-image: url( {% static 'app/images/wal3.jpg'%});background-size: cover;margin-left:5%;margin-right:5%;margin-top:150px;padding:40px 20px 20px 20px;height:800px;" >
+	<form method="get" action="updatee">
+    <div style="width:40%;float:left;margin-left:5%;padding-top:10px;">
+<br><br>
+        <div class="container form-check-inline" style="margin:10px 10px 10px 10px;">
+                  <div style="float:left;font-size:30px; font-family: 'Baskerville Old Face';">
+                      <p style="font-size:30px;color:black;" >1.{{ c.Question1 }}</p>
+                  <div ><p style="font-size:20px;font-family:'Baskerville Old Face';color: #2a2a2a;">{{ c.Answer1 }}</p>
+                     </div>
+                  </div><hr>
+             <div style="float:left;font-size:30px; font-family: 'Baskerville Old Face';">
+                      <p style="font-size:30px;color:black;" >2.{{ c.Question2 }}</p>
+                  <div ><p style="font-size:20px;font-family:'Baskerville Old Face';color: #2a2a2a;">{{ c.Answer2 }}</p>
+                     </div>
+                  </div><hr>
+             <div style="float:left;font-size:30px; font-family: 'Baskerville Old Face';">
+                      <p style="font-size:30px;color:black;" >3.{{ c.Question3 }}</p>
+                  <div ><p style="font-size:20px;font-family:'Baskerville Old Face';color: #2a2a2a;">{{ c.Answer3 }}</p>
+                     </div>
+                  </div>
+        </div>
+    </div>
+        <div style="width:35%;float:right;margin-right:10%;padding-right:5%;" >
+            <br><br>
+            <div class="container form-check-inline" style="margin:10px 10px 10px 10px;">
+    <div style="float:left;font-size:30px; font-family: 'Baskerville Old Face';width:300px;">Employee name:</div>
+    <div style="width:100px;float:right;">
+        <input class="btn-outline-dark btn-lg" style="border-color: darkmagenta;" type="textbox" name="CEmail" value="{{c.Employee}}" readonly>
+
+    </div>
+         </div><br>
+
+         <div class="container form-check-inline" style="margin:10px 10px 10px 10px;">
+    <div style="float:left;font-size:30px; font-family: 'Baskerville Old Face';width:300px;">Application number:</div>
+    <div style="width:100px;float:right;">
+        <input class="btn-outline-dark btn-lg" style="border-color: darkmagenta;" type="textbox" name="id" value="{{c.id}}" readonly>
+
+    </div>
+         </div><br>
+              <div class="container form-check-inline" style="margin:10px 10px 10px 10px;">
+    <div style="float:left;font-size:30px; font-family: 'Baskerville Old Face';width:300px;">Employee Email ID:</div>
+    <div style="width:100px;float:right;">
+        <input class="btn-outline-dark btn-lg" style="border-color: darkmagenta;" type="textbox" name="Emp_email" value="{{c.Employee_email}}" readonly>
+
+    </div>
+         </div><br>
+
+            <div class="container form-check-inline" style="margin:10px 10px 10px 10px;">
+                 <div style="float:left;font-size:30px; font-family: 'Baskerville Old Face';width:300px;">Application Status:</div>
+
+    <div style="width:100px;float:right;">
+
+                  <select class="btn-outline-dark btn-lg" name="sta">
+                      <option value="Applied">Applied</option>
+                      <option value="Under_Review">Under review</option>
+                      <option value="Selected">Select</option>
+
+                      <option value="Not_Selected">Not Selected</option>
+                  </select></div>
+            </div><br>
+ <div class="container form-check-inline" style="margin:10px 10px 10px 10px;">
+
+    <div style="width:100px;float:right;">
+                <button class="btn-primary btn-lg">Submit</button>
+        <!--a href="{% url 'updatee' id=c.id %}" type="submit" class="btn btn-primary py-2">submit</a-->
+                 </div>
+            </div><br>
+
+
+</div>
+    </form>
+<div class="jumbotron" style="margin:20px 20px 20px 20px;background-image: url( {% static 'app/images/back28.jpg'%});background-size: cover;height:700px;"></div>
+</div>
+{% endblock %}

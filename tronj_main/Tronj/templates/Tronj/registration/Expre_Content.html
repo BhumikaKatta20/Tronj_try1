@@ -1,0 +1,79 @@
+{% extends 'Tronj/myAccount.html' %}
+{% load staticfiles %}
+
+    <title>TRONJ-My Account</title>
+
+{% block head %}
+
+  <link rel="stylesheet" type="text/css" href="{% static 'app/content/Drone/sub/Profile.css' %}" />
+
+   <style>
+       .nav_iconn{
+           color: white;
+           font-size:25px;
+           font-family: "Baskerville Old Face";
+           padding:10px 10px 10px 10px;
+       }
+   .error{
+       font-size:20px;
+       color:red;
+   }
+   .labe{
+       font-size:25px;
+   }
+   </style>
+{% endblock %}
+<!-- ***** Header Area Start ***** -->
+ {% block content %}
+
+<div class="content" style="margin-top:10px;margin-left:8%; ">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-11">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title">Edit Your Profile</h4>
+                  <p class="card-category"></p>
+                </div>
+                <div class="card-body">
+                  <form action="Exp_edit" method="get">
+                     <h3>Exprience</h3>
+                    <div class="row">
+
+                          <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Company Name</label>
+                          <input type="text" class="form-control" value="{{ Fdata.exp_Company_name }}" name="exp_Company_name">
+                            <b class="error">{{exp_Company_name_error}}</b>
+                        </div></div>
+                               <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">years of Exprience</label>
+                          <input type="text" class="form-control" value="{{ Fdata.years_of_experience }}" name="years_of_experience">
+                            <b class="error">{{years_of_experience_error}}</b>
+                        </div></div>
+                                    <div class="col-md-4">
+                        <div class="form-group">
+                          <label class="bmd-label-floating labe">Experince in Programming Language</label>
+                        <select class='form-control' name="experienced_programming_langauage">
+                    <option value="python">Python</option>
+                    <option value="Cshrap">C#</option>
+                    <option value="web">webpage Designing</option>
+                    <option value="C">C</option>
+                    <option value="Cadvance">C++</option>
+                    <option value="java">Java</option>
+                    <option value="netframe">.Net Framework</option>
+                    <option value="PHP">PHP</option>
+                        </select></div></div></div>
+
+                    <button type="submit" class="btn btn-primary pull-right">Update Profile</button>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        {% endblock %}
