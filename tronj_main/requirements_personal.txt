@@ -60,7 +60,7 @@ isodate==0.6.0
 itsdangerous==1.1.0
 jdcal==1.4.1
 jedi==0.14.1
-Jinja2==2.10.1
+Jinja2==2.11.3
 jinja2-base64-filters==0.1.2
 jinja2-django-tags==0.5
 jinja2-time==0.2.0
