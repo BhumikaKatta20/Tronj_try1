@@ -126,7 +126,7 @@ Python-Email-Sender==1.1
 pytz==2019.1
 pywin32==226
 pywinpty==0.5.5
-PyYAML==5.1.2
+PyYAML==5.4
 pyzmq==18.0.2
 qtconsole==4.5.2
 queuelib==1.5.0
