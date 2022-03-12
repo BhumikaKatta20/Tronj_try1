@@ -97,7 +97,7 @@ parsel==1.5.2
 parso==0.5.1
 patsy==0.5.1
 pickleshare==0.7.5
-Pillow==6.1.0
+Pillow==9.0.1
 Pint==0.10.1
 pkgconfig==1.5.1
 plac==0.9.6
